@@ -2,168 +2,734 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flavor & Foils</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavor & Foils | Honest TCG, Live Pulls & Community</title>
+  <meta name="description" content="Flavor & Foils is a community-driven TCG brand built around honest cards, live pulls, auctions, gaming, and collector-first energy." />
 
   <style>
-    body{
-      margin:0;
-      background:#050008;
-      color:white;
-      font-family:Arial, sans-serif;
-      overflow-x:hidden;
+    :root {
+      --bg: #050008;
+      --panel: rgba(255,255,255,.055);
+      --panel-strong: rgba(255,255,255,.09);
+      --text: #ffffff;
+      --muted: #d4d4d8;
+      --soft: #a1a1aa;
+      --purple: #a855f7;
+      --purple-dark: #6d28d9;
+      --pink: #ec4899;
+      --blue: #38bdf8;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 30px 90px rgba(168,85,247,.24);
     }
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:40px 20px;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -3;
       background:
-        radial-gradient(circle at center, rgba(128,0,255,.35), transparent 45%),
-        linear-gradient(to bottom,#050008,#000);
+        radial-gradient(circle at 20% 10%, rgba(168,85,247,.35), transparent 28%),
+        radial-gradient(circle at 80% 25%, rgba(56,189,248,.18), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(236,72,153,.16), transparent 28%),
+        linear-gradient(180deg, #07000d 0%, #000 55%, #07000d 100%);
     }
 
-    .logo{
-      width:320px;
-      max-width:90%;
-      margin-bottom:30px;
-      border-radius:24px;
-      box-shadow:0 0 40px rgba(168,85,247,.6);
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      opacity: .12;
+      background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
     }
 
-    h1{
-      font-size:64px;
-      margin:0;
-      line-height:1;
+    a { color: inherit; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(5,0,8,.72);
+      border-bottom: 1px solid var(--border);
     }
 
-    p{
-      max-width:700px;
-      color:#d4d4d8;
-      font-size:20px;
-      line-height:1.6;
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 22px;
     }
 
-    .buttons{
-      margin-top:30px;
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      justify-content:center;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .4px;
     }
 
-    .btn{
-      padding:16px 28px;
-      border-radius:18px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.2s;
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(168,85,247,.55);
     }
 
-    .btn-main{
-      background:white;
-      color:black;
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .btn-alt{
-      border:1px solid rgba(255,255,255,.2);
-      color:white;
-      background:rgba(168,85,247,.12);
+    .nav-links a {
+      text-decoration: none;
+      transition: .2s;
     }
 
-    .btn:hover{
-      transform:scale(1.05);
+    .nav-links a:hover { color: white; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(168,85,247,.42);
+      background: rgba(168,85,247,.12);
+      color: #f3e8ff;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
     }
 
-    .section{
-      padding:100px 20px;
-      max-width:1100px;
-      margin:auto;
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      place-items: center;
+      padding: 76px 22px 90px;
+      position: relative;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-      margin-top:40px;
+    .hero-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 52px;
+      align-items: center;
     }
 
-    .card{
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:24px;
-      padding:28px;
+    .eyebrow { margin-bottom: 20px; }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: .88;
+      letter-spacing: -5px;
+      margin: 0;
+      font-weight: 1000;
     }
 
-    footer{
-      text-align:center;
-      padding:50px 20px;
-      color:#a1a1aa;
+    .gradient-text {
+      background: linear-gradient(90deg, #fff, #f0abfc, #93c5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      margin: 24px 0 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.55;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      border-radius: 18px;
+      padding: 16px 22px;
+      font-weight: 950;
+      border: 1px solid var(--border);
+      transition: transform .2s ease, background .2s ease, border .2s ease;
+      min-height: 54px;
+    }
+
+    .btn:hover { transform: translateY(-3px) scale(1.02); }
+    .btn-main {
+      background: white;
+      color: black;
+      box-shadow: 0 15px 45px rgba(255,255,255,.14);
+    }
+    .btn-purple {
+      background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .btn-dark {
+      background: rgba(255,255,255,.06);
+      color: white;
+    }
+
+    .logo-stage {
+      position: relative;
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-glow {
+      position: absolute;
+      width: 78%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,85,247,.55), transparent 62%);
+      filter: blur(24px);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .main-logo {
+      width: min(430px, 92vw);
+      border-radius: 34px;
+      position: relative;
+      box-shadow: 0 0 80px rgba(168,85,247,.48), 0 40px 100px rgba(0,0,0,.55);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-card {
+      position: absolute;
+      width: 132px;
+      min-height: 160px;
+      border-radius: 22px;
+      background: linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.045));
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 70px rgba(0,0,0,.45);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 1000;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .card-a { left: 0; top: 70px; transform: rotate(-10deg); }
+    .card-b { right: 0; bottom: 80px; transform: rotate(9deg); }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: .75; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+
+    .section {
+      padding: 96px 22px;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+
+    .kicker {
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 950;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: .95;
+      letter-spacing: -2px;
+      margin: 0;
+      font-weight: 1000;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+      max-width: 560px;
+      margin: 16px 0 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 28px;
+      padding: 28px;
+      min-height: 250px;
+      position: relative;
+      overflow: hidden;
+      transition: .24s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+      background: var(--panel-strong);
+      border-color: rgba(168,85,247,.45);
+    }
+
+    .feature::after {
+      content: "";
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      width: 140px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(168,85,247,.22);
+      filter: blur(8px);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(168,85,247,.18);
+      border: 1px solid rgba(168,85,247,.35);
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+
+    .feature h3 {
+      font-size: 25px;
+      margin: 0 0 12px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .link-hub {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .hub-card {
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+      border-radius: 28px;
+      padding: 26px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: .22s ease;
+    }
+
+    .hub-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,.28);
+      background: linear-gradient(135deg, rgba(168,85,247,.24), rgba(255,255,255,.05));
+    }
+
+    .hub-card strong { display: block; font-size: 22px; margin-bottom: 5px; }
+    .hub-card span { color: var(--muted); line-height: 1.4; }
+    .arrow { font-size: 30px; color: #e9d5ff; }
+
+    .split {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 32px;
+      padding: 32px;
+      box-shadow: 0 30px 90px rgba(0,0,0,.22);
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .day {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.22);
+      border-radius: 18px;
+    }
+
+    .day b { font-size: 16px; }
+    .day span { color: var(--muted); text-align: right; }
+
+    .ticker {
+      overflow: hidden;
+      border-block: 1px solid var(--border);
+      background: rgba(168,85,247,.08);
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      padding: 18px 0;
+      animation: ticker 24s linear infinite;
+      color: #f3e8ff;
+      font-weight: 950;
+      letter-spacing: 1px;
+    }
+
+    .ticker-track span { margin: 0 26px; }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .showcase {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .mini {
+      min-height: 190px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background:
+        linear-gradient(140deg, rgba(168,85,247,.2), rgba(255,255,255,.035)),
+        radial-gradient(circle at 80% 20%, rgba(56,189,248,.2), transparent 45%);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: .22s ease;
+    }
+
+    .mini:hover { transform: rotate(-1deg) translateY(-6px); }
+    .mini b { font-size: 20px; }
+    .mini span { color: var(--muted); line-height: 1.45; }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: 22px;
+      padding: 20px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 950;
+      font-size: 18px;
+    }
+
+    details p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .final-cta {
+      text-align: center;
+      border: 1px solid rgba(168,85,247,.4);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(168,85,247,.38), transparent 44%),
+        rgba(255,255,255,.055);
+      border-radius: 40px;
+      padding: 62px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta p {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.55;
+      max-width: 760px;
+      margin: 18px auto 0;
+    }
+
+    footer {
+      padding: 44px 22px;
+      border-top: 1px solid var(--border);
+      color: var(--soft);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-only { display: none; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .split { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .showcase { grid-template-columns: 1fr 1fr; }
+      .link-hub { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .mobile-only { display: inline-flex; }
+      .logo-stage { min-height: 400px; }
+      h1 { letter-spacing: -3px; }
+      .section-head { display: block; }
+    }
+
+    @media (max-width: 560px) {
+      .showcase { grid-template-columns: 1fr; }
+      .floating-card { display: none; }
+      .day { align-items: flex-start; flex-direction: column; }
+      .day span { text-align: left; }
+      .cta-row .btn { width: 100%; }
     }
   </style>
 </head>
 
 <body>
+  <div class="noise"></div>
 
-<section class="hero">
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="Flavor & Foils logo" />
+        <span>Flavor & Foils</span>
+      </a>
 
-  <img src="logo.png" class="logo">
+      <div class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#live">Live</a>
+        <a href="#community">Community</a>
+        <a href="#events">Events</a>
+        <a href="#faq">FAQ</a>
+      </div>
 
-  <h1>Flavor & Foils</h1>
+      <a class="pill" href="#links">All Links</a>
+    </div>
+  </nav>
 
-  <p>
-    Where the flavor hits different.
-    Honest TCG. Live pulls, auctions, gaming,
-    community, and real reactions.
-  </p>
+  <header id="top" class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow pill">⚡ TCG • real pulls • real reactions</div>
+        <h1>Where the <span class="gradient-text">flavor</span><br />hits different.</h1>
+        <p class="hero-copy">
+          Flavor & Foils is a collector-first TCG brand built around honest cards, late-night lives, real reactions, community, auctions, gaming, and no gatekeeping drops.
+        </p>
 
-  <div class="buttons">
-    <a class="btn btn-main" href="#">Shop Drops</a>
-    <a class="btn btn-alt" href="#">Watch Live</a>
+        <div class="cta-row">
+          <a class="btn btn-main" href="#links">Shop / Watch / Join</a>
+          <a class="btn btn-purple" href="#live">See Live Schedule</a>
+          <a class="btn btn-dark" href="#about">What is F&F?</a>
+        </div>
+      </div>
+
+      <div class="logo-stage">
+        <div class="logo-glow"></div>
+        <div class="floating-card card-a">LIVE<br />PULLS</div>
+        <img class="main-logo" src="logo.png" alt="Flavor & Foils logo" />
+        <div class="floating-card card-b">NO<br />GATEKEEPING</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>HONEST TCG</span><span>LIVE RIPS</span><span>AUCTIONS</span><span>GAMING</span><span>COMMUNITY DRIVEN</span><span>REAL REACTIONS</span>
+      <span>HONEST TCG</span><span>LIVE RIPS</span><span>AUCTIONS</span><span>GAMING</span><span>COMMUNITY DRIVEN</span><span>REAL REACTIONS</span>
+    </div>
   </div>
 
-</section>
+  <section id="links" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Link Hub</p>
+          <h2>Everything Flavor & Foils.</h2>
+          <p class="section-note">Replace these placeholder links with your TikTok, TikTok Shop, Discord, Linktree, YouTube, Instagram, eBay, and email.</p>
+        </div>
+      </div>
 
-<section class="section">
-
-  <h2>What We Do</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Live Breaks</h3>
-      <p>
-        Real pulls, real reactions, auctions,
-        gaming, and late-night chaos.
-      </p>
+      <div class="link-hub">
+        <a class="hub-card" href="#" target="_blank"><div><strong>TikTok Live</strong><span>Watch live pulls, auctions, and gaming.</span></div><div class="arrow">→</div></a>
+        <a class="hub-card" href="#" target="_blank"><div><strong>TikTok Shop</strong><span>Shop drops, singles, slabs, and live deals.</span></div><div class="arrow">→</div></a>
+        <a class="hub-card" href="#" target="_blank"><div><strong>Discord</strong><span>Join the community and get updates first.</span></div><div class="arrow">→</div></a>
+        <a class="hub-card" href="#" target="_blank"><div><strong>Linktree</strong><span>All platforms in one clean place.</span></div><div class="arrow">→</div></a>
+        <a class="hub-card" href="#" target="_blank"><div><strong>YouTube</strong><span>Clips, pulls, shorts, and longer videos.</span></div><div class="arrow">→</div></a>
+        <a class="hub-card" href="mailto:hello@flavorandfoils.com"><div><strong>Contact</strong><span>Questions, collabs, vendor events, and support.</span></div><div class="arrow">→</div></a>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Singles & Slabs</h3>
-      <p>
-        Honest pricing and collector-focused deals.
-      </p>
+  <section id="about" class="section">
+    <div class="wrap split">
+      <div class="panel">
+        <p class="kicker">About</p>
+        <h2>Honest TCG without the extra spice.</h2>
+        <p class="section-note">
+          Flavor & Foils helps collectors and families find what they love through real pulls, clean deals, community-first updates, and a stream experience that actually feels alive.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-purple" href="#community">Join the community</a>
+        </div>
+      </div>
+
+      <div class="grid-3" style="grid-template-columns: 1fr;">
+        <div class="feature"><div class="icon">🔥</div><h3>Real Pulls</h3><p>No fake hype. The wins, losses, chaos, and reactions are part of the show.</p></div>
+        <div class="feature"><div class="icon">💎</div><h3>Collector Focused</h3><p>Singles, slabs, sealed, auctions, and deals built for people who actually love the hobby.</p></div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Community Driven</h3>
-      <p>
-        Helping collectors and families find what they love
-        without all the extra spice.
-      </p>
+  <section id="shop" class="section">
+    <div class="wrap">
+      <p class="kicker">Shop</p>
+      <h2>Drops, slabs, singles, and live heat.</h2>
+      <p class="section-note">Use this section to feature current inventory, live deals, sealed products, chase items, or vendor table highlights.</p>
+
+      <div class="grid-3" style="margin-top: 34px;">
+        <div class="feature"><div class="icon">🃏</div><h3>Singles</h3><p>Raw cards, binder heat, vintage, modern hits, and collector-friendly finds.</p></div>
+        <div class="feature"><div class="icon">🏆</div><h3>Slabs</h3><p>PSA, CGC, TAG, AGS, and graded cards for collectors, gifts, and live sales.</p></div>
+        <div class="feature"><div class="icon">📦</div><h3>Sealed</h3><p>Bundles, tins, ETBs, collections, promos, and product drops when available.</p></div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <section id="live" class="section">
+    <div class="wrap split">
+      <div class="panel">
+        <p class="kicker">Live Schedule</p>
+        <h2>Six days on. One day to reset.</h2>
+        <p class="section-note">Times can shift, but this is the usual flow. Check TikTok/Discord for same-day updates.</p>
+      </div>
 
-</section>
+      <div class="panel">
+        <div class="schedule-list">
+          <div class="day"><b>Monday</b><span>Late-night gaming</span></div>
+          <div class="day"><b>Tuesday</b><span>Back into the cards</span></div>
+          <div class="day"><b>Wednesday</b><span>Chatting + Thursday preview</span></div>
+          <div class="day"><b>Thursday</b><span>Main auction night</span></div>
+          <div class="day"><b>Friday</b><span>Shorter late-night gaming</span></div>
+          <div class="day"><b>Saturday</b><span>Gaming, cards, or whatever hits</span></div>
+          <div class="day"><b>Sunday</b><span>Free day</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  flavorandfoils.com
-</footer>
+  <section id="community" class="section">
+    <div class="wrap">
+      <p class="kicker">Community</p>
+      <h2>Come for the pulls. Stay for the people.</h2>
+      <p class="section-note">This brand is built around the people who show up: collectors, families, night owls, gamers, bargain hunters, and card degenerates with good taste.</p>
 
+      <div class="showcase" style="margin-top: 34px;">
+        <div class="mini"><b>Giveaways</b><span>Community moments, buyer perks, and live stream surprises.</span></div>
+        <div class="mini"><b>Drop Intel</b><span>No gatekeeping when restocks, releases, and deals start moving.</span></div>
+        <div class="mini"><b>Gaming Nights</b><span>Late night chaos, games, and stream energy beyond cards.</span></div>
+        <div class="mini"><b>Vendor Tables</b><span>Local events, trade nights, and future in-person setups.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="section">
+    <div class="wrap">
+      <div class="final-cta">
+        <p class="kicker">Events & Updates</p>
+        <h2>Vendor nights, stream alerts, and big drops go here.</h2>
+        <p>Add your next convention, Collect-A-Con plans, local card shows, stream specials, food truck crossover ideas, or charity/community events.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-main" href="#links">Follow for updates</a>
+          <a class="btn btn-dark" href="#faq">Read FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="wrap split">
+      <div>
+        <p class="kicker">FAQ</p>
+        <h2>Quick answers.</h2>
+        <p class="section-note">This can become your trust section for buyers, shipping, live auctions, grading, returns, and contact info.</p>
+      </div>
+
+      <div class="faq">
+        <details open><summary>What is Flavor & Foils?</summary><p>A community-driven TCG brand focused on honest cards, real pulls, live reactions, auctions, gaming, and collector-first energy.</p></details>
+        <details><summary>Where do I buy?</summary><p>Use the links section for TikTok Shop, live streams, eBay, or any current sales platform.</p></details>
+        <details><summary>When do you go live?</summary><p>The normal schedule is six days a week with Sunday as the reset day. Exact times can shift, so check TikTok or Discord for updates.</p></details>
+        <details><summary>Do you ship cards safely?</summary><p>Yes. This section can list your shipping style: sleeves, top loaders, team bags, rigid mailers, boxes for slabs, and tracking when required.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 Flavor & Foils. Where the flavor hits different.</div>
+      <div>TCG • real pulls • real reactions • community driven</div>
+    </div>
+  </footer>
 </body>
 </html>
