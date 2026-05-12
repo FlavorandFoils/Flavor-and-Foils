@@ -89,6 +89,9 @@
     }
 
     .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
       font-weight: 1000;
       letter-spacing: -.5px;
@@ -99,6 +102,22 @@
     .brand span {
       color: var(--purple-light);
       text-shadow: 0 0 24px rgba(168,85,247,.48);
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+      color: white;
+      font-size: 14px;
+      font-weight: 1000;
+      box-shadow:
+        0 0 22px rgba(168,85,247,.5),
+        inset 0 1px 0 rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.15);
     }
 
     .nav-links {
@@ -454,6 +473,17 @@
       box-shadow: 0 30px 90px rgba(0,0,0,.24);
     }
 
+    .about-photo {
+      width: 100%;
+      border-radius: 24px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      display: block;
+      object-fit: cover;
+      max-height: 520px;
+    }
+
     .showcase {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -676,7 +706,8 @@
     }
 
     @media (max-width: 560px) {
-      .brand { font-size: 21px; }
+      .brand { font-size: 19px; gap: 9px; }
+      .brand-badge { width: 38px; height: 38px; border-radius: 13px; font-size: 12px; }
       .pill { font-size: 12px; padding: 8px 11px; }
       .showcase { grid-template-columns: 1fr; }
       .floating-card { display: none; }
@@ -705,6 +736,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand route-link" href="/" data-route="/">
+        <div class="brand-badge">F&F</div>
         <span>Flavor & Foils</span>
       </a>
 
@@ -805,7 +837,7 @@
           <p class="kicker">The Ecosystem</p>
           <h2>More than a storefront.</h2>
           <p class="section-note">
-            <span class="ff">Flavor & Foils</span> is built around the whole collector experience — shopping, streaming, collecting, trading, showing up, and keeping the hobby fun.
+            <span class="ff">Flavor & Foils</span> is built around the whole collector experience. Shopping, streaming, collecting, trading, showing up, and keeping the hobby fun.
           </p>
 
           <div class="grid-3" style="margin-top: 34px;">
@@ -923,7 +955,7 @@
           <p class="kicker">The Vault</p>
           <h1>Not everything is for sale.</h1>
           <p class="hero-copy">
-            The personal collection behind <span class="ff">Flavor & Foils</span> — grails, vintage, slabs, raw favorites, grading watches, pickups, and cards that are part of the story.
+            The personal collection behind <span class="ff">Flavor & Foils</span>. Grails, vintage, slabs, raw favorites, grading watches, pickups, and cards that are part of the story.
           </p>
 
           <div class="cta-row">
@@ -939,7 +971,7 @@
             <p class="kicker">Collection Focus</p>
             <h2>The cards that keep the hobby alive.</h2>
             <p class="section-note">
-              The full portfolio lives on Collectr, but the Vault is the home base for the collection side of the brand — favorite pieces, future goals, grading stories, and the cards that mean more than just market price.
+              The full portfolio lives on Collectr, but the Vault is the home base for the collection side of the brand. Favorite pieces, future goals, grading stories, and the cards that mean more than just market price.
             </p>
 
             <div class="clean-list">
@@ -978,7 +1010,7 @@
           <p class="kicker">Community</p>
           <h1>Come for the pulls. Stay for the people.</h1>
           <p class="hero-copy">
-            The community is the engine — collectors, families, night owls, gamers, bargain hunters, and card degenerates with good taste.
+            The community is the engine. Collectors, families, night owls, gamers, bargain hunters, and card degenerates with good taste.
           </p>
 
           <div class="cta-row">
@@ -1058,13 +1090,15 @@
           <p class="hero-copy">
             I’ve always been deep into collecting, gaming, late-night streams, chasing grails, and building communities around the stuff people actually care about.
             <br><br>
-            Pokémon has brought me a ridiculous amount of joy for as long as I can remember — collecting, trading, gaming, pack openings, vintage cards, grading submissions, all of it.
+            Pokémon has brought me a ridiculous amount of joy for as long as I can remember. Collecting, trading, gaming, pack openings, vintage cards, grading submissions… all of it.
             <br><br>
             <span class="ff">Flavor & Foils</span> grew from that same passion. What started as loving the hobby turned into building a small community full of people who genuinely enjoy being part of it together.
             <br><br>
             Some nights we’re ripping packs. Some nights we’re gaming until way too late. Some nights we’re chasing grails, talking submissions, or just hanging out during streams.
             <br><br>
-            No matter what’s going on, the best part has always been the people. I’m beyond grateful for everyone who’s become part of this little community and helped turn something I’ve loved since childhood into something real.
+            No matter what’s going on, the best part has always been the people.
+            <br><br>
+            I’m beyond grateful for everyone who’s become part of this little community and helped turn something I’ve loved since childhood into something real.
           </p>
 
           <div class="cta-row">
@@ -1077,10 +1111,12 @@
       <section class="section">
         <div class="wrap split">
           <div class="panel">
+            <img class="about-photo" src="aboutme.jpeg" alt="Flavor & Foils creator" />
+
             <p class="kicker">The Vibe</p>
             <h2>Built by collectors. Fueled by community.</h2>
             <p class="section-note">
-              <span class="ff">Flavor & Foils</span> brings together late-night streams, real pulls, collector energy, and community-driven drops — all in one place.
+              <span class="ff">Flavor & Foils</span> brings together late-night streams, real pulls, collector energy, and community-driven drops all in one place.
             </p>
           </div>
 
