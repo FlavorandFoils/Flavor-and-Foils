@@ -9,23 +9,22 @@
 
   <style>
     :root {
-      --bg: #050008;
-      --panel: rgba(255,255,255,.055);
-      --panel-strong: rgba(255,255,255,.09);
+      --bg: #07000d;
+      --panel: rgba(255,255,255,.075);
+      --panel-strong: rgba(255,255,255,.11);
       --text: #ffffff;
-      --muted: #d4d4d8;
-      --soft: #a1a1aa;
+      --muted: #e4e4e7;
+      --soft: #b8b8c2;
       --purple: #a855f7;
       --purple-light: #c084fc;
       --purple-dark: #6d28d9;
       --pink: #ec4899;
       --blue: #38bdf8;
-      --border: rgba(255,255,255,.12);
-      --shadow: 0 30px 90px rgba(168,85,247,.24);
+      --border: rgba(255,255,255,.15);
+      --shadow: 0 30px 90px rgba(168,85,247,.28);
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -42,10 +41,10 @@
       inset: 0;
       z-index: -3;
       background:
-        radial-gradient(circle at 20% 10%, rgba(168,85,247,.35), transparent 28%),
-        radial-gradient(circle at 80% 25%, rgba(56,189,248,.18), transparent 25%),
-        radial-gradient(circle at 50% 80%, rgba(236,72,153,.16), transparent 28%),
-        linear-gradient(180deg, #07000d 0%, #000 55%, #07000d 100%);
+        radial-gradient(circle at 20% 10%, rgba(168,85,247,.42), transparent 30%),
+        radial-gradient(circle at 80% 25%, rgba(56,189,248,.22), transparent 26%),
+        radial-gradient(circle at 50% 80%, rgba(236,72,153,.2), transparent 30%),
+        linear-gradient(180deg, #0b0014 0%, #020005 55%, #090012 100%);
     }
 
     .noise {
@@ -67,7 +66,7 @@
     .flavor-word {
       color: var(--purple-light);
       font-weight: 1000;
-      text-shadow: 0 0 24px rgba(168,85,247,.42);
+      text-shadow: 0 0 24px rgba(168,85,247,.46);
     }
 
     .nav {
@@ -75,7 +74,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(18px);
-      background: rgba(5,0,8,.78);
+      background: rgba(7,0,13,.82);
       border-bottom: 1px solid var(--border);
     }
 
@@ -99,7 +98,7 @@
 
     .brand span {
       color: var(--purple-light);
-      text-shadow: 0 0 24px rgba(168,85,247,.42);
+      text-shadow: 0 0 24px rgba(168,85,247,.48);
     }
 
     .nav-links {
@@ -118,15 +117,15 @@
 
     .nav-links a:hover {
       color: white;
-      text-shadow: 0 0 18px rgba(168,85,247,.55);
+      text-shadow: 0 0 18px rgba(168,85,247,.6);
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(168,85,247,.42);
-      background: rgba(168,85,247,.12);
+      border: 1px solid rgba(168,85,247,.48);
+      background: rgba(168,85,247,.16);
       color: #f3e8ff;
       padding: 9px 14px;
       border-radius: 999px;
@@ -136,13 +135,8 @@
       white-space: nowrap;
     }
 
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
+    .page { display: none; }
+    .page.active { display: block; }
 
     .hero {
       min-height: calc(100vh - 72px);
@@ -161,9 +155,7 @@
       align-items: center;
     }
 
-    .eyebrow {
-      margin-bottom: 20px;
-    }
+    .eyebrow { margin-bottom: 20px; }
 
     h1 {
       font-size: clamp(46px, 7.5vw, 98px);
@@ -173,19 +165,12 @@
       font-weight: 1000;
     }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #fff, #f0abfc, #93c5fd);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
     .hero-copy {
       margin: 24px 0 0;
-      max-width: 680px;
+      max-width: 760px;
       color: var(--muted);
       font-size: clamp(18px, 2vw, 23px);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .cta-row {
@@ -209,14 +194,12 @@
       min-height: 54px;
     }
 
-    .btn:hover {
-      transform: translateY(-3px) scale(1.02);
-    }
+    .btn:hover { transform: translateY(-3px) scale(1.02); }
 
     .btn-main {
       background: white;
       color: black;
-      box-shadow: 0 15px 45px rgba(255,255,255,.14);
+      box-shadow: 0 15px 45px rgba(255,255,255,.16);
     }
 
     .btn-purple {
@@ -226,7 +209,7 @@
     }
 
     .btn-dark {
-      background: rgba(255,255,255,.06);
+      background: rgba(255,255,255,.08);
       color: white;
     }
 
@@ -242,7 +225,7 @@
       width: 78%;
       aspect-ratio: 1;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(168,85,247,.55), transparent 62%);
+      background: radial-gradient(circle, rgba(168,85,247,.6), transparent 62%);
       filter: blur(24px);
       animation: pulse 4s ease-in-out infinite;
     }
@@ -252,7 +235,7 @@
       border-radius: 34px;
       position: relative;
       box-shadow:
-        0 0 80px rgba(168,85,247,.48),
+        0 0 80px rgba(168,85,247,.52),
         0 40px 100px rgba(0,0,0,.55);
       animation: float 5s ease-in-out infinite;
     }
@@ -262,7 +245,7 @@
       width: 132px;
       min-height: 160px;
       border-radius: 22px;
-      background: linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.045));
+      background: linear-gradient(160deg, rgba(255,255,255,.2), rgba(255,255,255,.06));
       border: 1px solid var(--border);
       backdrop-filter: blur(12px);
       box-shadow: 0 20px 70px rgba(0,0,0,.45);
@@ -274,17 +257,8 @@
       padding: 16px;
     }
 
-    .card-a {
-      left: 0;
-      top: 70px;
-      transform: rotate(-10deg);
-    }
-
-    .card-b {
-      right: 0;
-      bottom: 80px;
-      transform: rotate(9deg);
-    }
+    .card-a { left: 0; top: 70px; transform: rotate(-10deg); }
+    .card-b { right: 0; bottom: 80px; transform: rotate(9deg); }
 
     @keyframes float {
       0%,100% { transform: translateY(0); }
@@ -299,7 +273,7 @@
     .ticker {
       overflow: hidden;
       border-block: 1px solid var(--border);
-      background: rgba(168,85,247,.08);
+      background: rgba(168,85,247,.1);
       white-space: nowrap;
     }
 
@@ -312,18 +286,14 @@
       letter-spacing: 1px;
     }
 
-    .ticker-track span {
-      margin: 0 26px;
-    }
+    .ticker-track span { margin: 0 26px; }
 
     @keyframes ticker {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }
     }
 
-    .section {
-      padding: 96px 22px;
-    }
+    .section { padding: 96px 22px; }
 
     .wrap {
       max-width: 1200px;
@@ -358,8 +328,8 @@
     .section-note {
       color: var(--muted);
       font-size: 18px;
-      line-height: 1.55;
-      max-width: 650px;
+      line-height: 1.6;
+      max-width: 760px;
       margin: 16px 0 0;
     }
 
@@ -389,7 +359,7 @@
     .feature:hover {
       transform: translateY(-6px);
       background: var(--panel-strong);
-      border-color: rgba(168,85,247,.45);
+      border-color: rgba(168,85,247,.5);
     }
 
     .feature::after {
@@ -400,7 +370,7 @@
       width: 140px;
       aspect-ratio: 1;
       border-radius: 50%;
-      background: rgba(168,85,247,.22);
+      background: rgba(168,85,247,.24);
       filter: blur(8px);
     }
 
@@ -410,8 +380,8 @@
       border-radius: 16px;
       display: grid;
       place-items: center;
-      background: rgba(168,85,247,.18);
-      border: 1px solid rgba(168,85,247,.35);
+      background: rgba(168,85,247,.2);
+      border: 1px solid rgba(168,85,247,.4);
       font-size: 24px;
       margin-bottom: 22px;
     }
@@ -436,7 +406,7 @@
 
     .hub-card {
       border: 1px solid var(--border);
-      background: linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+      background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(255,255,255,.045));
       border-radius: 28px;
       padding: 26px;
       text-decoration: none;
@@ -449,8 +419,8 @@
 
     .hub-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(255,255,255,.28);
-      background: linear-gradient(135deg, rgba(168,85,247,.24), rgba(255,255,255,.05));
+      border-color: rgba(255,255,255,.3);
+      background: linear-gradient(135deg, rgba(168,85,247,.26), rgba(255,255,255,.06));
     }
 
     .hub-card strong {
@@ -481,7 +451,7 @@
       background: var(--panel);
       border-radius: 32px;
       padding: 32px;
-      box-shadow: 0 30px 90px rgba(0,0,0,.22);
+      box-shadow: 0 30px 90px rgba(0,0,0,.24);
     }
 
     .showcase {
@@ -495,8 +465,8 @@
       border: 1px solid var(--border);
       border-radius: 24px;
       background:
-        linear-gradient(140deg, rgba(168,85,247,.2), rgba(255,255,255,.035)),
-        radial-gradient(circle at 80% 20%, rgba(56,189,248,.2), transparent 45%);
+        linear-gradient(140deg, rgba(168,85,247,.22), rgba(255,255,255,.045)),
+        radial-gradient(circle at 80% 20%, rgba(56,189,248,.22), transparent 45%);
       padding: 22px;
       display: flex;
       flex-direction: column;
@@ -504,18 +474,9 @@
       transition: .22s ease;
     }
 
-    .mini:hover {
-      transform: rotate(-1deg) translateY(-6px);
-    }
-
-    .mini b {
-      font-size: 20px;
-    }
-
-    .mini span {
-      color: var(--muted);
-      line-height: 1.45;
-    }
+    .mini:hover { transform: rotate(-1deg) translateY(-6px); }
+    .mini b { font-size: 20px; }
+    .mini span { color: var(--muted); line-height: 1.45; }
 
     .schedule-list {
       display: grid;
@@ -530,66 +491,52 @@
       align-items: center;
       padding: 16px 18px;
       border: 1px solid var(--border);
-      background: rgba(0,0,0,.22);
+      background: rgba(255,255,255,.045);
       border-radius: 18px;
     }
 
-    .day b {
-      font-size: 16px;
-    }
+    .day b { font-size: 16px; }
+    .day span { color: var(--muted); text-align: right; }
 
-    .day span {
-      color: var(--muted);
-      text-align: right;
-    }
-
-    .vault-card {
-      min-height: 310px;
-      border-radius: 30px;
+    .vault-simple {
       border: 1px solid rgba(168,85,247,.35);
       background:
-        radial-gradient(circle at 30% 10%, rgba(168,85,247,.32), transparent 34%),
-        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 25px 80px rgba(0,0,0,.28);
+        radial-gradient(circle at 15% 0%, rgba(168,85,247,.28), transparent 36%),
+        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-radius: 34px;
+      padding: 34px;
+      box-shadow: var(--shadow);
     }
 
-    .vault-card h3 {
-      font-size: 28px;
-      margin: 0 0 12px;
+    .clean-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
     }
 
-    .vault-card p {
+    .clean-item {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.055);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .clean-item strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .clean-item span {
       color: var(--muted);
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      border: 1px solid rgba(168,85,247,.38);
-      background: rgba(168,85,247,.12);
-      color: #f3e8ff;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 13px;
-      font-weight: 850;
+      line-height: 1.5;
     }
 
     .bulletin {
       border: 1px solid rgba(168,85,247,.35);
       background:
-        linear-gradient(135deg, rgba(168,85,247,.16), rgba(255,255,255,.04)),
-        rgba(255,255,255,.04);
+        linear-gradient(135deg, rgba(168,85,247,.18), rgba(255,255,255,.05)),
+        rgba(255,255,255,.045);
       border-radius: 34px;
       padding: 28px;
       box-shadow: var(--shadow);
@@ -608,7 +555,7 @@
       align-items: center;
       padding: 18px;
       border: 1px solid var(--border);
-      background: rgba(0,0,0,.24);
+      background: rgba(255,255,255,.045);
       border-radius: 20px;
     }
 
@@ -633,8 +580,8 @@
 
     .status {
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.09);
       padding: 8px 11px;
       font-size: 12px;
       font-weight: 900;
@@ -668,10 +615,10 @@
 
     .final-cta {
       text-align: center;
-      border: 1px solid rgba(168,85,247,.4);
+      border: 1px solid rgba(168,85,247,.42);
       background:
-        radial-gradient(circle at 50% 0%, rgba(168,85,247,.38), transparent 44%),
-        rgba(255,255,255,.055);
+        radial-gradient(circle at 50% 0%, rgba(168,85,247,.42), transparent 44%),
+        rgba(255,255,255,.065);
       border-radius: 40px;
       padding: 62px 26px;
       box-shadow: var(--shadow);
@@ -690,10 +637,10 @@
     }
 
     .page-hero .wrap {
-      border: 1px solid rgba(168,85,247,.3);
+      border: 1px solid rgba(168,85,247,.36);
       background:
-        radial-gradient(circle at 20% 0%, rgba(168,85,247,.32), transparent 34%),
-        rgba(255,255,255,.045);
+        radial-gradient(circle at 20% 0%, rgba(168,85,247,.36), transparent 36%),
+        rgba(255,255,255,.06);
       border-radius: 40px;
       padding: 54px 34px;
       box-shadow: var(--shadow);
@@ -717,81 +664,37 @@
     @media (max-width: 900px) {
       .hero-grid,
       .split,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      .grid-2 { grid-template-columns: 1fr; }
 
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .showcase {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .link-hub {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .logo-stage {
-        min-height: 400px;
-      }
-
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      .section-head {
-        display: block;
-      }
+      .grid-3 { grid-template-columns: 1fr; }
+      .showcase { grid-template-columns: 1fr 1fr; }
+      .link-hub { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .logo-stage { min-height: 400px; }
+      h1 { letter-spacing: -3px; }
+      .section-head { display: block; }
     }
 
     @media (max-width: 560px) {
-      .brand {
-        font-size: 21px;
-      }
-
-      .pill {
-        font-size: 12px;
-        padding: 8px 11px;
-      }
-
-      .showcase {
-        grid-template-columns: 1fr;
-      }
-
-      .floating-card {
-        display: none;
-      }
+      .brand { font-size: 21px; }
+      .pill { font-size: 12px; padding: 8px 11px; }
+      .showcase { grid-template-columns: 1fr; }
+      .floating-card { display: none; }
 
       .day {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .day span {
-        text-align: left;
-      }
-
-      .cta-row .btn {
-        width: 100%;
-      }
+      .day span { text-align: left; }
+      .cta-row .btn { width: 100%; }
 
       .board-item {
         grid-template-columns: 1fr;
       }
 
-      .pin {
-        display: none;
-      }
-
-      .status {
-        width: fit-content;
-      }
+      .pin { display: none; }
+      .status { width: fit-content; }
     }
   </style>
 </head>
@@ -890,7 +793,7 @@
               <div><strong>Collectr Showcase</strong><span>Personal collection, grails, slabs, and collector credibility.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="mailto:hello@flavorandfoils.com">
+            <a class="hub-card" href="mailto:flavorandfoils@gmail.com">
               <div><strong>Contact</strong><span>Questions, collabs, vendor events, support, and business.</span></div><div class="arrow">→</div>
             </a>
           </div>
@@ -966,7 +869,7 @@
         <div class="wrap">
           <div class="grid-3">
             <div class="feature"><div class="icon">🃏</div><h3>Singles</h3><p>Raw cards, binder heat, vintage, modern hits, and collector-friendly finds.</p></div>
-            <div class="feature"><div class="icon">🏆</div><h3>Slabs</h3><p>Graded cards, personal favorites, showcase pieces, and live sale inventory when available.</p></div>
+            <div class="feature"><div class="icon">🏆</div><h3>Slabs</h3><p>PSA, BGS, CGC, TAG, and graded cards for collectors, gifts, and live sales.</p></div>
             <div class="feature"><div class="icon">📦</div><h3>Sealed</h3><p>Bundles, tins, ETBs, collections, promos, and product drops when they hit.</p></div>
           </div>
         </div>
@@ -995,19 +898,19 @@
             <p class="kicker">Live Schedule</p>
             <h2>Six days on. One day to reset.</h2>
             <p class="section-note">
-              Times can shift depending on drops, orders, life, and what the stream is feeling. TikTok and Discord get the freshest updates.
+              Live six days a week with afternoons, late nights, and Thursday as the main auction night. TikTok and Discord get the freshest same-day updates.
             </p>
           </div>
 
           <div class="panel">
             <div class="schedule-list">
-              <div class="day"><b>Monday</b><span>Late-night gaming</span></div>
-              <div class="day"><b>Tuesday</b><span>Back into the cards</span></div>
-              <div class="day"><b>Wednesday</b><span>Chatting + Thursday preview</span></div>
-              <div class="day"><b>Thursday</b><span>Main auction night</span></div>
-              <div class="day"><b>Friday</b><span>Shorter late-night gaming</span></div>
-              <div class="day"><b>Saturday</b><span>Gaming, cards, or whatever hits</span></div>
-              <div class="day"><b>Sunday</b><span>Free day / reset</span></div>
+              <div class="day"><b>Monday</b><span>Late night stream • Around 11 PM</span></div>
+              <div class="day"><b>Tuesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
+              <div class="day"><b>Wednesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
+              <div class="day"><b>Thursday</b><span>Main auction night • Around 11 PM</span></div>
+              <div class="day"><b>Friday</b><span>Late night stream • Around 11 PM</span></div>
+              <div class="day"><b>Saturday</b><span>Off day • Gotta live life a little 😂</span></div>
+              <div class="day"><b>Sunday</b><span>Afternoon stream • Around 3–6 PM</span></div>
             </div>
           </div>
         </div>
@@ -1020,7 +923,7 @@
           <p class="kicker">The Vault</p>
           <h1>Not everything is for sale.</h1>
           <p class="hero-copy">
-            The personal side of <span class="ff">Flavor & Foils</span> — grails, vintage, slabs, raw favorites, collection goals, pickup stories, and cards that helped build the brand.
+            The personal collection behind <span class="ff">Flavor & Foils</span> — grails, vintage, slabs, raw favorites, grading watches, pickups, and cards that are part of the story.
           </p>
 
           <div class="cta-row">
@@ -1031,52 +934,38 @@
       </header>
 
       <section class="section">
-        <div class="wrap grid-2">
-          <div class="vault-card">
-            <div>
-              <h3>Grails</h3>
-              <p>Heavy hitters, favorites, chase cards, vintage pieces, and cards that are part of the story.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Vintage</span>
-              <span class="tag">Slabs</span>
-              <span class="tag">Raw Favorites</span>
-            </div>
-          </div>
+        <div class="wrap">
+          <div class="vault-simple">
+            <p class="kicker">Collection Focus</p>
+            <h2>The cards that keep the hobby alive.</h2>
+            <p class="section-note">
+              The full portfolio lives on Collectr, but the Vault is the home base for the collection side of the brand — favorite pieces, future goals, grading stories, and the cards that mean more than just market price.
+            </p>
 
-          <div class="vault-card">
-            <div>
-              <h3>Recent Pickups</h3>
-              <p>New additions, trades, convention finds, mail days, and cards that deserve a closer look.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">Mail Day</span>
-              <span class="tag">Trades</span>
-              <span class="tag">Show Finds</span>
-            </div>
-          </div>
+            <div class="clean-list">
+              <div class="clean-item">
+                <strong>Grails & personal favorites</strong>
+                <span>Heavy hitters, favorite artworks, vintage pieces, modern heat, and cards that actually feel special.</span>
+              </div>
 
-          <div class="vault-card">
-            <div>
-              <h3>Grading Watch</h3>
-              <p>Cards waiting on grades, submission stories, results, heartbreaks, surprises, and wins.</p>
-            </div>
-            <div class="tag-row">
-              <span class="tag">PSA</span>
-              <span class="tag">CGC</span>
-              <span class="tag">TAG</span>
-            </div>
-          </div>
+              <div class="clean-item">
+                <strong>Recent pickups & collection goals</strong>
+                <span>Mail days, trades, show finds, cards on the radar, and pieces that might become part of the story.</span>
+              </div>
 
-          <div class="vault-card">
-            <div>
-              <h3>Not For Sale</h3>
-              <p>The personal keepers. Cards that mean something beyond market price.</p>
+              <div class="clean-item">
+                <strong>Grading watchlist</strong>
+                <span>PSA, BGS, CGC, TAG, submissions, results, surprises, heartbreaks, and wins.</span>
+              </div>
+
+              <div class="clean-item">
+                <strong>Not for sale</strong>
+                <span>The keepers. Some cards are memories, goals, favorites, or just too good to let go.</span>
+              </div>
             </div>
-            <div class="tag-row">
-              <span class="tag">Personal</span>
-              <span class="tag">Grails</span>
-              <span class="tag">Forever Holds</span>
+
+            <div class="cta-row">
+              <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">Open Collectr Portfolio</a>
             </div>
           </div>
         </div>
@@ -1164,10 +1053,18 @@
     <section class="page" data-page="/about">
       <header class="page-hero">
         <div class="wrap">
-          <p class="kicker">About</p>
-          <h1>Honest TCG without the extra spice.</h1>
+          <p class="kicker">About Me</p>
+          <h1>More than just cards.</h1>
           <p class="hero-copy">
-            <span class="ff">Flavor & Foils</span> started from collecting, streaming, late nights, real reactions, and wanting to build something that feels alive instead of fake-corporate.
+            I’ve always been deep into collecting, gaming, late-night streams, chasing grails, and building communities around the stuff people actually care about.
+            <br><br>
+            Pokémon has brought me a ridiculous amount of joy for as long as I can remember — collecting, trading, gaming, pack openings, vintage cards, grading submissions, all of it.
+            <br><br>
+            <span class="ff">Flavor & Foils</span> grew from that same passion. What started as loving the hobby turned into building a small community full of people who genuinely enjoy being part of it together.
+            <br><br>
+            Some nights we’re ripping packs. Some nights we’re gaming until way too late. Some nights we’re chasing grails, talking submissions, or just hanging out during streams.
+            <br><br>
+            No matter what’s going on, the best part has always been the people. I’m beyond grateful for everyone who’s become part of this little community and helped turn something I’ve loved since childhood into something real.
           </p>
 
           <div class="cta-row">
@@ -1181,16 +1078,16 @@
         <div class="wrap split">
           <div class="panel">
             <p class="kicker">The Vibe</p>
-            <h2>Collector first. Community driven.</h2>
+            <h2>Built by collectors. Fueled by community.</h2>
             <p class="section-note">
-              Real cards, real pulls, real reactions, and a space where people can enjoy the hobby without all the gatekeeping.
+              <span class="ff">Flavor & Foils</span> brings together late-night streams, real pulls, collector energy, and community-driven drops — all in one place.
             </p>
           </div>
 
           <div class="faq">
             <details open>
               <summary>What is Flavor & Foils?</summary>
-              <p>A community-driven TCG brand focused on honest cards, real pulls, live reactions, auctions, gaming, and collector-first energy.</p>
+              <p>A community-driven TCG brand focused on honest cards, real pulls, live reactions, auctions, gaming, collecting, and collector-first energy.</p>
             </details>
 
             <details>
@@ -1200,12 +1097,22 @@
 
             <details>
               <summary>When do you go live?</summary>
-              <p>The normal flow is six days a week with Sunday as the reset day. Exact times can shift, so check TikTok or Discord for updates.</p>
+              <p>Live six days a week. Afternoons are usually Tuesday, Wednesday, and Sunday around 3–6 PM. Late nights are Monday, Thursday, and Friday around 11 PM. Thursday is the main auction night. Saturday is the off day.</p>
             </details>
 
             <details>
               <summary>Do you ship cards safely?</summary>
               <p>Cards are packed with collector care using sleeves, top loaders, team bags, rigid mailers, boxes for slabs when needed, and tracking when required.</p>
+            </details>
+
+            <details>
+              <summary>What grading companies do you follow?</summary>
+              <p>PSA, BGS, CGC, and TAG are the main ones talked about for grading, submissions, reveals, and collection updates.</p>
+            </details>
+
+            <details>
+              <summary>How do I contact you?</summary>
+              <p>Email flavorandfoils@gmail.com for questions, collabs, vendor events, support, or business.</p>
             </details>
           </div>
         </div>
