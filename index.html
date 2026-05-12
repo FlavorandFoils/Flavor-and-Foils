@@ -692,41 +692,29 @@
     }
 
    @media (max-width: 900px) {
-  .hero-grid,
-  .split,
-  .grid-2 { grid-template-columns: 1fr; }
-
-  .grid-3 { grid-template-columns: 1fr; }
-  .showcase { grid-template-columns: 1fr 1fr; }
-  .link-hub { grid-template-columns: 1fr; }
-
   .nav-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px 14px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
   }
 
   .brand {
-    justify-content: center;
+    justify-content: center !important;
   }
 
   .nav-links {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    font-size: 13px;
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    flex-wrap: wrap !important;
+    font-size: 13px !important;
   }
 
   .nav-spacer {
-    display: none;
+    display: none !important;
   }
-
-  .logo-stage { min-height: 400px; }
-  h1 { letter-spacing: -3px; }
-  .section-head { display: block; }
 }
     @media (max-width: 560px) {
       .brand { font-size: 19px; gap: 9px; }
