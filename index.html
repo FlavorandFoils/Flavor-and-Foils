@@ -923,8 +923,12 @@
       color: var(--muted);
       font-size: 19px;
       line-height: 1.55;
-      max-width: 760px;
+      max-width: 1100px;
       margin: 18px auto 0;
+    }
+
+    .final-cta .single-line {
+      white-space: nowrap;
     }
 
     .page-hero {
@@ -1491,13 +1495,17 @@
     }
 
     .card-b {
-      right: -8%;
-      bottom: 34px;
-      width: 190px;
-      min-height: 250px;
-      transform: translateX(28px) rotate(13deg);
-      z-index: 1;
-      font-size: 21px;
+      right: -5%;
+      bottom: 18px;
+      width: 170px;
+      min-height: 220px;
+      transform: translateX(10px) rotate(13deg);
+      z-index: 5;
+      font-size: 22px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(168,85,247,.25), transparent 45%),
+        linear-gradient(160deg, rgba(255,255,255,.16), rgba(255,255,255,.045));
+      box-shadow: 0 0 34px rgba(168,85,247,.55), 0 26px 70px rgba(0,0,0,.55);
     }
 
     .logo-glow {
@@ -1576,6 +1584,127 @@
       .featured-card { border-radius: 22px; }
     }
 
+
+
+    /* FINAL FIX: remove the floating logo cards so the main logo is clean and readable. */
+    .logo-stage .floating-card {
+      display: none !important;
+    }
+
+    .logo-stage {
+      overflow: visible;
+    }
+
+    .main-logo {
+      z-index: 3;
+    }
+
+    @media (max-width: 1100px) {
+      .final-cta .single-line {
+        white-space: normal;
+      }
+    }
+
+
+    /* =========================================================
+       FRONT LOGO HOLO CARD — BUILT IN
+       Keeps the Flavor & Foils logo visible while adding the
+       animated no-gatekeeping card beside it.
+    ========================================================= */
+
+    .logo-stage{
+      overflow: visible;
+      isolation: isolate;
+    }
+
+    .main-logo{
+      z-index: 3;
+    }
+
+    .logo-stage .front-card{
+      display: block;
+      position: absolute;
+      right: -84px;
+      bottom: 42px;
+      width: 178px;
+      height: 238px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,.22), transparent 30%),
+        linear-gradient(145deg, rgba(255,255,255,.18), rgba(120,60,255,.08));
+      border: 1px solid rgba(192,132,252,.5);
+      backdrop-filter: blur(14px);
+      box-shadow:
+        0 0 32px rgba(168,85,247,.38),
+        0 28px 80px rgba(0,0,0,.45),
+        inset 0 0 34px rgba(255,255,255,.055);
+      transform: rotate(11deg);
+      z-index: 6;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .logo-stage .front-card::before{
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.22) 45%, transparent 100%);
+      transform: translateX(-130%);
+      animation: holoShine 5s linear infinite;
+    }
+
+    .logo-stage .front-card::after{
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .floating-card-inner{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 1000;
+      font-size: 1.18rem;
+      letter-spacing: .09em;
+      line-height: 1.08;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 20px rgba(168,85,247,.7);
+      z-index: 2;
+      padding: 18px;
+    }
+
+    @keyframes holoShine{
+      0%{ transform: translateX(-130%) rotate(8deg); }
+      100%{ transform: translateX(130%) rotate(8deg); }
+    }
+
+    @media (max-width: 900px){
+      .logo-stage .front-card{
+        right: 18px;
+        bottom: 18px;
+        width: 132px;
+        height: 178px;
+        border-radius: 24px;
+      }
+
+      .floating-card-inner{
+        font-size: .92rem;
+      }
+    }
+
+    @media (max-width: 560px){
+      .logo-stage .front-card{
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
@@ -1591,7 +1720,7 @@
 
       <div class="nav-links">
         <a class="route-link" href="/" data-route="/">Honest TCG</a>
-        <a class="route-link" href="/live" data-route="/live">Live Rips</a>
+        <a class="route-link" href="/live" data-route="/live">Live</a>
         <a class="route-link" href="/shop" data-route="/shop">Auctions</a>
         <a class="route-link" href="/vault" data-route="/vault">Vault</a>
         <a class="route-link" href="/community" data-route="/community">Community Driven</a>
@@ -1646,7 +1775,7 @@
 
             <div class="cta-row">
               <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join the Discord</a>
-              <a class="btn btn-dark" id="latestVideoButton" href="#" target="_blank" rel="noopener">Latest Video</a>
+              <a class="btn btn-dark" id="latestVideoButton" href="#" data-link="latestVideo" target="_blank" rel="noopener">Latest Video</a>
             </div>
 
             <div class="next-stream-line">
@@ -1658,13 +1787,14 @@
 
           <div class="logo-stage">
             <div class="logo-glow"></div>
-            <div class="floating-card card-a">
-              <strong>GATEKEEPING?</strong>
-              <span>NOT HERE.</span>
-              <small>We keep it real, open, and built for collectors who actually love the hobby.</small>
-            </div>
             <img class="main-logo" src="logo.png" alt="Flavor & Foils logo" />
-            <div class="floating-card card-b">NO<br />GATEKEEPING</div>
+
+            <div class="floating-card front-card" aria-hidden="true">
+              <div class="floating-card-inner">
+                <span>NO</span>
+                <span>GATEKEEPING</span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -1767,7 +1897,7 @@
           <div class="final-cta">
             <p class="kicker">Start Here</p>
             <h2>Pull up to the community.</h2>
-            <p>
+            <p class="single-line">
               Follow the streams, join the Discord, check the Vault, and keep up with where <span class="ff">Flavor & Foils</span> is going next.
             </p>
 
@@ -1940,7 +2070,7 @@
               Shows being watched, places <span class="ff">Flavor & Foils</span> might hit, possible vendor setups, stream events, and community plans.
             </p>
 
-            <div class="board-list">
+            <div class="board-list" id="eventsBoardList">
               <div class="board-item">
                 <div class="pin"></div>
                 <div>
@@ -2102,10 +2232,16 @@
         { day: "Friday", detail: "Late night stream • Around 11 PM" },
         { day: "Saturday", detail: "Off day • Gotta live life a little 😂" },
         { day: "Sunday", detail: "Afternoon stream • Around 3–6 PM" }
+      ],
+      eventsBoard: [
+        { title: "Collect-A-Con Watchlist", text: "Big show energy, trade possibilities, content, pickups, and future setup potential.", status: "Watching" },
+        { title: "Local Card Shows", text: "Potential vendor tables, trade nights, meetups, and live content days.", status: "Interested" },
+        { title: "Stream Specials", text: "Theme nights, auctions, community goals, giveaways, and live-only drops.", status: "Upcoming" },
+        { title: "Community Meetups", text: "Future plans for collectors who want to trade, rip packs, talk cards, and hang.", status: "Maybe" }
       ]
     };
 
-    const siteContent = window.siteContent || defaultSiteContent;
+    const activeSiteContent = window.siteContent || defaultSiteContent;
 
     function setText(id, value) {
       const element = document.getElementById(id);
@@ -2114,12 +2250,12 @@
 
     function resolveLink(linkValue) {
       if (!linkValue) return "#";
-      if (siteContent.links && siteContent.links[linkValue]) return siteContent.links[linkValue];
+      if (activeSiteContent.links && activeSiteContent.links[linkValue]) return activeSiteContent.links[linkValue];
       return linkValue;
     }
 
     function applySiteContent() {
-      const links = siteContent.links || {};
+      const links = activeSiteContent.links || {};
       document.querySelectorAll("[data-link]").forEach(link => {
         const key = link.dataset.link;
         if (links[key]) link.href = links[key];
@@ -2128,7 +2264,7 @@
       const latestVideoButton = document.getElementById("latestVideoButton");
       if (latestVideoButton && links.latestVideo) latestVideoButton.href = links.latestVideo;
 
-      const daily = siteContent.daily || {};
+      const daily = activeSiteContent.daily || {};
       setText("mainBannerTitle", daily.mainBannerTitle);
       setText("mainBannerText", daily.mainBannerText);
       setText("liveStatus", daily.liveStatus);
@@ -2145,7 +2281,7 @@
         mainBannerButton.href = resolveLink(daily.mainBannerButtonLink || "discord");
       }
 
-      const featured = siteContent.featured || {};
+      const featured = activeSiteContent.featured || {};
       setText("featuredLabel", featured.label);
       setText("featuredTitle", featured.title);
       setText("featuredText", featured.text);
@@ -2158,9 +2294,29 @@
       }
 
       const scheduleList = document.getElementById("scheduleList");
-      if (scheduleList && Array.isArray(siteContent.schedule)) {
-        scheduleList.innerHTML = siteContent.schedule.map(item => `
-          <div class="day"><b>${item.day}</b><span>${item.detail}</span></div>
+      if (scheduleList && Array.isArray(activeSiteContent.schedule)) {
+        scheduleList.innerHTML = activeSiteContent.schedule.map(item => {
+          if (typeof item === "string") {
+            const parts = item.split("—");
+            const day = (parts[0] || "Stream").trim();
+            const detail = (parts.slice(1).join("—") || item).trim();
+            return `<div class="day"><b>${day}</b><span>${detail}</span></div>`;
+          }
+          return `<div class="day"><b>${item.day}</b><span>${item.detail}</span></div>`;
+        }).join("");
+      }
+
+      const eventsBoardList = document.getElementById("eventsBoardList");
+      if (eventsBoardList && Array.isArray(activeSiteContent.eventsBoard)) {
+        eventsBoardList.innerHTML = activeSiteContent.eventsBoard.map(event => `
+          <div class="board-item">
+            <div class="pin"></div>
+            <div>
+              <strong>${event.title}</strong>
+              <span>${event.text}</span>
+            </div>
+            <div class="status">${event.status}</div>
+          </div>
         `).join("");
       }
     }
