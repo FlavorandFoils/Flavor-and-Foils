@@ -1650,12 +1650,11 @@
 
 
     /* =========================================================
-       FRONT LOGO HOLO CARD — BUILT IN
-       Keeps the Flavor & Foils logo visible while adding the
-       animated no-gatekeeping card beside it.
-    ========================================================= */
+/* =========================================================
+   FRONT LOGO HOLO CARD — BUILT IN
+========================================================= */
 
-    .logo-stage .front-card{
+.logo-stage .front-card{
   display: block !important;
   position: absolute;
   right: -118px;
@@ -1663,22 +1662,16 @@
   width: 230px;
   height: 315px;
   border-radius: 24px;
-
   background:
     radial-gradient(circle at 20% 10%, rgba(255,255,255,.22), transparent 32%),
     linear-gradient(145deg, rgba(255,255,255,.16), rgba(120,60,255,.08));
-
   border: 2px solid rgba(192,132,252,.55);
-
   backdrop-filter: blur(12px);
-
   box-shadow:
     0 0 34px rgba(168,85,247,.45),
     0 28px 80px rgba(0,0,0,.5),
     inset 0 0 34px rgba(255,255,255,.055);
-
   transform: rotate(13deg);
-
   z-index: 6;
   overflow: hidden;
   pointer-events: none;
@@ -1688,12 +1681,7 @@
   content: "";
   position: absolute;
   inset: -30%;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,.28) 45%,
-    transparent 100%
-  );
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.28) 45%, transparent 100%);
   transform: translateX(-130%);
   animation: holoShine 5s linear infinite;
 }
@@ -1713,60 +1701,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
+  width: 100%;
   font-weight: 1000;
-  font-size: 1.28rem;
-  letter-spacing: .07em;
+  font-size: .78rem;
+  letter-spacing: .02em;
   line-height: 1.05;
   text-align: center;
   color: white;
   text-shadow: 0 0 20px rgba(168,85,247,.85);
   z-index: 2;
-  padding: 22px;
-  transform: rotate(-2deg);
+  padding: 26px;
 }
-    .logo-stage .front-card::before{
-      content: "";
-      position: absolute;
-      inset: -30%;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.22) 45%, transparent 100%);
-      transform: translateX(-130%);
-      animation: holoShine 5s linear infinite;
-    }
 
-    .logo-stage .front-card::after{
-      content: "";
-      position: absolute;
-      inset: 12px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.12);
-    }
-
-    .floating-card-inner{
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-weight: 1000;
-      font-size: 1.18rem;
-      letter-spacing: .09em;
-      line-height: 1.08;
-      text-align: center;
-      color: white;
-      text-shadow: 0 0 20px rgba(168,85,247,.7);
-      z-index: 2;
-      padding: 18px;
-    }
-
-    @keyframes holoShine{
-      0%{ transform: translateX(-130%) rotate(8deg); }
-      100%{ transform: translateX(130%) rotate(8deg); }
-    }
-
-    @media (max-width: 900px){
+@keyframes holoShine{
+  0%{ transform: translateX(-130%) rotate(8deg); }
+  100%{ transform: translateX(130%) rotate(8deg); }
+}
       .logo-stage .front-card{
         right: 18px;
         bottom: 18px;
