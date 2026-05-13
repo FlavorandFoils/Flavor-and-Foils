@@ -573,9 +573,24 @@
   animation: holoShine 5s linear infinite;
 }
 
-.floating-card-inner {
-  position: relative;
+.floating-card-inner{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 1000;
+  font-size: .92rem;
+  letter-spacing: .05em;
+  line-height: 1.05;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 20px rgba(168,85,247,.85);
   z-index: 2;
+  padding: 26px;
+  transform: rotate(10deg);
 }
 
 @keyframes holoShine {
@@ -1640,33 +1655,30 @@
        animated no-gatekeeping card beside it.
     ========================================================= */
 
-    .logo-stage{
-      overflow: visible;
-      isolation: isolate;
-    }
-
-    .main-logo{
-      z-index: 3;
-    }
-
-   .logo-stage .front-card{
+    .logo-stage .front-card{
   display: block !important;
   position: absolute;
-  right: -105px;
-  bottom: 48px;
-  width: 220px;
-  height: 300px;
-  border-radius: 22px;
+  right: -118px;
+  bottom: 32px;
+  width: 230px;
+  height: 315px;
+  border-radius: 24px;
+
   background:
     radial-gradient(circle at 20% 10%, rgba(255,255,255,.22), transparent 32%),
     linear-gradient(145deg, rgba(255,255,255,.16), rgba(120,60,255,.08));
+
   border: 2px solid rgba(192,132,252,.55);
+
   backdrop-filter: blur(12px);
+
   box-shadow:
     0 0 34px rgba(168,85,247,.45),
     0 28px 80px rgba(0,0,0,.5),
     inset 0 0 34px rgba(255,255,255,.055);
-  transform: rotate(10deg);
+
+  transform: rotate(13deg);
+
   z-index: 6;
   overflow: hidden;
   pointer-events: none;
