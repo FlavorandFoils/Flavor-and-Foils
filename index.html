@@ -192,178 +192,6 @@
       white-space: nowrap;
     }
 
-
-    /* =========================================================
-       DAILY UPDATE / CONTENT.JS SECTIONS
-       These styles support the parts controlled by content.js.
-    ========================================================= */
-
-    .daily-dashboard {
-      padding: 42px 22px 0;
-    }
-
-    .daily-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-    }
-
-    .daily-card {
-      border: 1px solid rgba(168,85,247,.38);
-      background:
-        radial-gradient(circle at 15% 0%, rgba(168,85,247,.24), transparent 34%),
-        rgba(255,255,255,.065);
-      border-radius: 26px;
-      padding: 22px;
-      box-shadow: 0 22px 70px rgba(0,0,0,.24);
-    }
-
-    .daily-card .status-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: var(--purple-light);
-      box-shadow: 0 0 18px rgba(168,85,247,.85);
-      display: inline-block;
-      margin-right: 8px;
-    }
-
-    .daily-card small {
-      display: block;
-      color: #d8b4fe;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      font-size: 11px;
-      font-weight: 1000;
-      margin-bottom: 9px;
-    }
-
-    .daily-card strong {
-      display: block;
-      font-size: 22px;
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-
-    .daily-card span {
-      color: var(--muted);
-      line-height: 1.45;
-      font-size: 15px;
-    }
-
-    .featured-spotlight {
-      padding: 70px 22px 0;
-    }
-
-    .featured-card {
-      max-width: 1200px;
-      margin: auto;
-      border: 1px solid rgba(168,85,247,.42);
-      background:
-        radial-gradient(circle at 0% 0%, rgba(168,85,247,.38), transparent 34%),
-        radial-gradient(circle at 100% 60%, rgba(56,189,248,.18), transparent 30%),
-        linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
-      border-radius: 38px;
-      padding: clamp(28px, 5vw, 50px);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 26px;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .featured-card::after {
-      content: "";
-      position: absolute;
-      width: 240px;
-      height: 240px;
-      border-radius: 999px;
-      right: -80px;
-      top: -100px;
-      background: rgba(236,72,153,.18);
-      filter: blur(12px);
-    }
-
-    .featured-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .featured-label {
-      color: #d8b4fe;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: 1000;
-      margin: 0 0 12px;
-    }
-
-    .featured-content h2 {
-      margin-bottom: 16px;
-    }
-
-    .featured-content p {
-      color: var(--muted);
-      font-size: 19px;
-      line-height: 1.6;
-      margin: 0;
-      max-width: 760px;
-    }
-
-    .featured-actions {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      gap: 14px;
-      justify-items: end;
-    }
-
-    .featured-note {
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.07);
-      border-radius: 24px;
-      padding: 20px;
-      color: var(--muted);
-      line-height: 1.45;
-      max-width: 360px;
-    }
-
-    .site-alert {
-      padding: 0 22px;
-      margin-top: -34px;
-      position: relative;
-      z-index: 4;
-    }
-
-    .site-alert-inner {
-      max-width: 1200px;
-      margin: auto;
-      border: 1px solid rgba(168,85,247,.42);
-      background: rgba(7,0,13,.72);
-      backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 18px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 22px 70px rgba(0,0,0,.28);
-    }
-
-    .site-alert-inner b {
-      color: #f3e8ff;
-    }
-
-    .site-alert-inner span {
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-
     @media (max-width: 900px) {
       .nav-inner {
         display: flex;
@@ -956,178 +784,6 @@
       flex-wrap: wrap;
     }
 
-
-    /* =========================================================
-       DAILY UPDATE / CONTENT.JS SECTIONS
-       These styles support the parts controlled by content.js.
-    ========================================================= */
-
-    .daily-dashboard {
-      padding: 42px 22px 0;
-    }
-
-    .daily-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
-    }
-
-    .daily-card {
-      border: 1px solid rgba(168,85,247,.38);
-      background:
-        radial-gradient(circle at 15% 0%, rgba(168,85,247,.24), transparent 34%),
-        rgba(255,255,255,.065);
-      border-radius: 26px;
-      padding: 22px;
-      box-shadow: 0 22px 70px rgba(0,0,0,.24);
-    }
-
-    .daily-card .status-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: var(--purple-light);
-      box-shadow: 0 0 18px rgba(168,85,247,.85);
-      display: inline-block;
-      margin-right: 8px;
-    }
-
-    .daily-card small {
-      display: block;
-      color: #d8b4fe;
-      text-transform: uppercase;
-      letter-spacing: 1.6px;
-      font-size: 11px;
-      font-weight: 1000;
-      margin-bottom: 9px;
-    }
-
-    .daily-card strong {
-      display: block;
-      font-size: 22px;
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-
-    .daily-card span {
-      color: var(--muted);
-      line-height: 1.45;
-      font-size: 15px;
-    }
-
-    .featured-spotlight {
-      padding: 70px 22px 0;
-    }
-
-    .featured-card {
-      max-width: 1200px;
-      margin: auto;
-      border: 1px solid rgba(168,85,247,.42);
-      background:
-        radial-gradient(circle at 0% 0%, rgba(168,85,247,.38), transparent 34%),
-        radial-gradient(circle at 100% 60%, rgba(56,189,248,.18), transparent 30%),
-        linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
-      border-radius: 38px;
-      padding: clamp(28px, 5vw, 50px);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 26px;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .featured-card::after {
-      content: "";
-      position: absolute;
-      width: 240px;
-      height: 240px;
-      border-radius: 999px;
-      right: -80px;
-      top: -100px;
-      background: rgba(236,72,153,.18);
-      filter: blur(12px);
-    }
-
-    .featured-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .featured-label {
-      color: #d8b4fe;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      font-weight: 1000;
-      margin: 0 0 12px;
-    }
-
-    .featured-content h2 {
-      margin-bottom: 16px;
-    }
-
-    .featured-content p {
-      color: var(--muted);
-      font-size: 19px;
-      line-height: 1.6;
-      margin: 0;
-      max-width: 760px;
-    }
-
-    .featured-actions {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      gap: 14px;
-      justify-items: end;
-    }
-
-    .featured-note {
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.07);
-      border-radius: 24px;
-      padding: 20px;
-      color: var(--muted);
-      line-height: 1.45;
-      max-width: 360px;
-    }
-
-    .site-alert {
-      padding: 0 22px;
-      margin-top: -34px;
-      position: relative;
-      z-index: 4;
-    }
-
-    .site-alert-inner {
-      max-width: 1200px;
-      margin: auto;
-      border: 1px solid rgba(168,85,247,.42);
-      background: rgba(7,0,13,.72);
-      backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 18px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 22px 70px rgba(0,0,0,.28);
-    }
-
-    .site-alert-inner b {
-      color: #f3e8ff;
-    }
-
-    .site-alert-inner span {
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-
     @media (max-width: 900px) {
       .hero-grid,
       .split,
@@ -1139,23 +795,6 @@
       .logo-stage { min-height: 400px; }
       h1 { letter-spacing: -3px; }
       .section-head { display: block; }
-    }
-
-
-    @media (max-width: 900px) {
-      .daily-grid,
-      .featured-card {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-actions {
-        justify-items: start;
-      }
-
-      .site-alert-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
     }
 
     @media (max-width: 560px) {
@@ -1222,8 +861,8 @@
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Shop / Watch on TikTok</a>
-              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join Discord</a>
+              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Shop / Watch on TikTok</a>
+              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
               <a class="btn btn-dark route-link" href="/vault" data-route="/vault">Enter The Vault</a>
             </div>
           </div>
@@ -1236,55 +875,6 @@
           </div>
         </div>
       </header>
-
-      <section class="site-alert" aria-label="Current Flavor & Foils update">
-        <div class="site-alert-inner">
-          <div>
-            <b id="mainBannerTitle">Current Update</b><br />
-            <span id="mainBannerText">Shop sold out — restock coming soon.</span>
-          </div>
-          <a id="mainBannerButton" class="pill" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Get Updates</a>
-        </div>
-      </section>
-
-      <section class="daily-dashboard" aria-label="Daily status dashboard">
-        <div class="daily-grid">
-          <div class="daily-card">
-            <small>Live Status</small>
-            <strong><span class="status-dot"></span><span id="liveStatus">OFFLINE</span></strong>
-            <span id="liveStatusNote">Discord gets same-day updates first.</span>
-          </div>
-
-          <div class="daily-card">
-            <small>Next Stream</small>
-            <strong id="nextStream">Thursday at 8PM EST</strong>
-            <span id="nextStreamNote">Times can move around when life gets spicy.</span>
-          </div>
-
-          <div class="daily-card">
-            <small>Shop Status</small>
-            <strong id="shopStatus">RESTOCKING</strong>
-            <span id="shopStatusNote">Inventory updates will post here and in Discord.</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="featured-spotlight" aria-label="Featured Spotlight">
-        <div class="featured-card">
-          <div class="featured-content">
-            <p class="featured-label" id="featuredLabel">FEATURED SPOTLIGHT</p>
-            <h2 id="featuredTitle">PSA Submission Update</h2>
-            <p id="featuredText">Some serious vintage heat is still out at grading — big updates coming when the returns land.</p>
-          </div>
-
-          <div class="featured-actions">
-            <div class="featured-note" id="featuredNote">
-              This spotlight is the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.
-            </div>
-            <a id="featuredButton" class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join the Discord for updates</a>
-          </div>
-        </div>
-      </section>
 
       <div class="ticker">
         <div class="ticker-track">
@@ -1306,27 +896,27 @@
           </div>
 
           <div class="link-hub">
-            <a class="hub-card" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">
               <div><strong>TikTok</strong><span>Shop, live streams, clips, drops, and the main hub.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">
               <div><strong>Discord</strong><span>Community updates, stream alerts, drops, and collector talk.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" data-link="instagram" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" target="_blank" rel="noopener">
               <div><strong>Instagram</strong><span>Photos, setup shots, pulls, cards, and brand visuals.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF" data-link="youtube" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF" target="_blank" rel="noopener">
               <div><strong>YouTube</strong><span>Clips, shorts, pulls, reactions, and longer videos.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">
               <div><strong>Collectr Showcase</strong><span>Personal collection, grails, slabs, and collector credibility.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="mailto:flavorandfoils@gmail.com" data-link="email">
+            <a class="hub-card" href="mailto:flavorandfoils@gmail.com">
               <div><strong>Contact</strong><span>Questions, collabs, vendor events, support, and business.</span></div><div class="arrow">→</div>
             </a>
           </div>
@@ -1373,8 +963,8 @@
             </p>
 
             <div class="cta-row" style="justify-content:center;">
-              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Watch TikTok</a>
-              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join Discord</a>
+              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Watch TikTok</a>
+              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
               <a class="btn btn-dark route-link" href="/community" data-route="/community">Community Board</a>
             </div>
           </div>
@@ -1392,8 +982,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Shop on TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Drop Alerts</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Shop on TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Drop Alerts</a>
           </div>
         </div>
       </header>
@@ -1419,8 +1009,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Watch on TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Get Live Alerts</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Watch on TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Get Live Alerts</a>
           </div>
         </div>
       </header>
@@ -1436,7 +1026,7 @@
           </div>
 
           <div class="panel">
-            <div class="schedule-list" id="scheduleList">
+            <div class="schedule-list">
               <div class="day"><b>Monday</b><span>Late night stream • Around 11 PM</span></div>
               <div class="day"><b>Tuesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
               <div class="day"><b>Wednesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
@@ -1460,8 +1050,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">View Collectr Showcase</a>
-            <a class="btn btn-purple" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">See Vault Clips</a>
+            <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">View Collectr Showcase</a>
+            <a class="btn btn-purple" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">See Vault Clips</a>
           </div>
         </div>
       </header>
@@ -1498,7 +1088,7 @@
             </div>
 
             <div class="cta-row">
-              <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">Open Collectr Portfolio</a>
+              <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">Open Collectr Portfolio</a>
             </div>
           </div>
         </div>
@@ -1515,8 +1105,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join Discord</a>
-            <a class="btn btn-purple" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" data-link="instagram" target="_blank" rel="noopener">Follow Instagram</a>
+            <a class="btn btn-main" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
+            <a class="btn btn-purple" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" target="_blank" rel="noopener">Follow Instagram</a>
           </div>
         </div>
       </header>
@@ -1603,8 +1193,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Follow TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join The Community</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Follow TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join The Community</a>
           </div>
         </div>
       </header>
@@ -1664,106 +1254,7 @@
     </div>
   </footer>
 
-  <script src="content.js"></script>
-
   <script>
-    const defaultSiteContent = {
-      links: {
-        tiktok: "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
-        discord: "https://discord.gg/5yxDPmGRMg",
-        instagram: "https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr",
-        youtube: "https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF",
-        collectr: "https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397",
-        email: "mailto:flavorandfoils@gmail.com"
-      },
-      daily: {
-        mainBannerTitle: "Current Update",
-        mainBannerText: "Shop sold out — restock coming soon.",
-        mainBannerButtonText: "Get Updates",
-        liveStatus: "OFFLINE",
-        liveStatusNote: "Discord gets same-day updates first.",
-        nextStream: "Thursday at 8PM EST",
-        nextStreamNote: "Times can move around when life gets spicy.",
-        shopStatus: "RESTOCKING",
-        shopStatusNote: "Inventory updates will post here and in Discord."
-      },
-      featured: {
-        label: "FEATURED SPOTLIGHT",
-        title: "PSA Submission Update",
-        text: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
-        note: "This spotlight is the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.",
-        buttonText: "Join the Discord for updates",
-        buttonLink: "discord"
-      },
-      schedule: [
-        { day: "Monday", detail: "Late night stream • Around 11 PM" },
-        { day: "Tuesday", detail: "Afternoon stream • Around 3–6 PM" },
-        { day: "Wednesday", detail: "Afternoon stream • Around 3–6 PM" },
-        { day: "Thursday", detail: "Main auction night • Around 11 PM" },
-        { day: "Friday", detail: "Late night stream • Around 11 PM" },
-        { day: "Saturday", detail: "Off day • Gotta live life a little 😂" },
-        { day: "Sunday", detail: "Afternoon stream • Around 3–6 PM" }
-      ]
-    };
-
-    const siteContent = window.siteContent || defaultSiteContent;
-
-    function setText(id, value) {
-      const element = document.getElementById(id);
-      if (element && value !== undefined && value !== null) element.textContent = value;
-    }
-
-    function resolveLink(linkValue) {
-      if (!linkValue) return "#";
-      if (siteContent.links && siteContent.links[linkValue]) return siteContent.links[linkValue];
-      return linkValue;
-    }
-
-    function applySiteContent() {
-      const links = siteContent.links || {};
-      document.querySelectorAll("[data-link]").forEach(link => {
-        const key = link.dataset.link;
-        if (links[key]) link.href = links[key];
-      });
-
-      const daily = siteContent.daily || {};
-      setText("mainBannerTitle", daily.mainBannerTitle);
-      setText("mainBannerText", daily.mainBannerText);
-      setText("liveStatus", daily.liveStatus);
-      setText("liveStatusNote", daily.liveStatusNote);
-      setText("nextStream", daily.nextStream);
-      setText("nextStreamNote", daily.nextStreamNote);
-      setText("shopStatus", daily.shopStatus);
-      setText("shopStatusNote", daily.shopStatusNote);
-
-      const mainBannerButton = document.getElementById("mainBannerButton");
-      if (mainBannerButton) {
-        if (daily.mainBannerButtonText) mainBannerButton.textContent = daily.mainBannerButtonText;
-        mainBannerButton.href = resolveLink(daily.mainBannerButtonLink || "discord");
-      }
-
-      const featured = siteContent.featured || {};
-      setText("featuredLabel", featured.label);
-      setText("featuredTitle", featured.title);
-      setText("featuredText", featured.text);
-      setText("featuredNote", featured.note);
-
-      const featuredButton = document.getElementById("featuredButton");
-      if (featuredButton) {
-        if (featured.buttonText) featuredButton.textContent = featured.buttonText;
-        featuredButton.href = resolveLink(featured.buttonLink || "discord");
-      }
-
-      const scheduleList = document.getElementById("scheduleList");
-      if (scheduleList && Array.isArray(siteContent.schedule)) {
-        scheduleList.innerHTML = siteContent.schedule.map(item => `
-          <div class="day"><b>${item.day}</b><span>${item.detail}</span></div>
-        `).join("");
-      }
-    }
-
-    applySiteContent();
-
     const pages = document.querySelectorAll(".page");
     const routeLinks = document.querySelectorAll(".route-link");
 
@@ -1806,6 +1297,5 @@
 
     setRoute(window.location.pathname, false);
   </script>
-  <script src="content.js"></script>
 </body>
 </html>
