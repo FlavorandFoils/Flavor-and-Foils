@@ -1627,19 +1627,6 @@
 
 
 
-    /* FINAL FIX: remove the floating logo cards so the main logo is clean and readable. */
-    .logo-stage .floating-card {
-      display: none !important;
-    }
-
-    .logo-stage {
-      overflow: visible;
-    }
-
-    .main-logo {
-      z-index: 3;
-    }
-
     @media (max-width: 1100px) {
       .final-cta .single-line {
         white-space: normal;
@@ -1663,7 +1650,7 @@
     }
 
     .logo-stage .front-card{
-      display: block;
+      display: block !important;
       position: absolute;
       right: -84px;
       bottom: 42px;
@@ -1829,13 +1816,6 @@
           <div class="logo-stage">
             <div class="logo-glow"></div>
             <img class="main-logo" src="logo.png" alt="Flavor & Foils logo" />
-            <div class="floating-card front-card">
-  <div class="floating-card-inner">
-    <span>NO</span>
-    <span>GATEKEEPING</span>
-  </div>
-</div>
-
             <div class="floating-card front-card" aria-hidden="true">
               <div class="floating-card-inner">
                 <span>NO</span>
