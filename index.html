@@ -540,7 +540,48 @@
       text-align: center;
       padding: 16px 12px;
     }
+.front-card {
+  position: absolute;
+  right: -45px;
+  bottom: 55px;
+  width: 150px;
+  height: 190px;
+  min-height: 190px;
+  z-index: 20;
+  transform: rotate(11deg);
+  overflow: hidden;
+  border: 1px solid rgba(216,180,254,.55);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.22), rgba(168,85,247,.12)),
+    radial-gradient(circle at 20% 20%, rgba(56,189,248,.28), transparent 35%);
+  box-shadow:
+    0 0 34px rgba(168,85,247,.45),
+    0 24px 70px rgba(0,0,0,.45);
+}
 
+.front-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,.28) 45%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  animation: holoShine 5s linear infinite;
+}
+
+.floating-card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes holoShine {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
+}
     .card-a { left: 0; top: 70px; transform: rotate(-10deg); }
     .card-b { right: 0; bottom: 80px; transform: rotate(9deg); }
 
