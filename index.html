@@ -1649,29 +1649,70 @@
       z-index: 3;
     }
 
-    .logo-stage .front-card{
-      display: block !important;
-      position: absolute;
-      right: -84px;
-      bottom: 42px;
-      width: 178px;
-      height: 238px;
-      border-radius: 28px;
-      background:
-        radial-gradient(circle at 18% 8%, rgba(255,255,255,.22), transparent 30%),
-        linear-gradient(145deg, rgba(255,255,255,.18), rgba(120,60,255,.08));
-      border: 1px solid rgba(192,132,252,.5);
-      backdrop-filter: blur(14px);
-      box-shadow:
-        0 0 32px rgba(168,85,247,.38),
-        0 28px 80px rgba(0,0,0,.45),
-        inset 0 0 34px rgba(255,255,255,.055);
-      transform: rotate(11deg);
-      z-index: 6;
-      overflow: hidden;
-      pointer-events: none;
-    }
+   .logo-stage .front-card{
+  display: block !important;
+  position: absolute;
+  right: -105px;
+  bottom: 48px;
+  width: 220px;
+  height: 300px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,.22), transparent 32%),
+    linear-gradient(145deg, rgba(255,255,255,.16), rgba(120,60,255,.08));
+  border: 2px solid rgba(192,132,252,.55);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 34px rgba(168,85,247,.45),
+    0 28px 80px rgba(0,0,0,.5),
+    inset 0 0 34px rgba(255,255,255,.055);
+  transform: rotate(10deg);
+  z-index: 6;
+  overflow: hidden;
+  pointer-events: none;
+}
 
+.logo-stage .front-card::before{
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,.28) 45%,
+    transparent 100%
+  );
+  transform: translateX(-130%);
+  animation: holoShine 5s linear infinite;
+}
+
+.logo-stage .front-card::after{
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.floating-card-inner{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 1000;
+  font-size: 1.28rem;
+  letter-spacing: .07em;
+  line-height: 1.05;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 20px rgba(168,85,247,.85);
+  z-index: 2;
+  padding: 22px;
+  transform: rotate(-2deg);
+}
     .logo-stage .front-card::before{
       content: "";
       position: absolute;
