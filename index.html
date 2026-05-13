@@ -192,6 +192,178 @@
       white-space: nowrap;
     }
 
+
+    /* =========================================================
+       DAILY UPDATE / CONTENT.JS SECTIONS
+       These styles support the parts controlled by content.js.
+    ========================================================= */
+
+    .daily-dashboard {
+      padding: 42px 22px 0;
+    }
+
+    .daily-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .daily-card {
+      border: 1px solid rgba(168,85,247,.38);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(168,85,247,.24), transparent 34%),
+        rgba(255,255,255,.065);
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.24);
+    }
+
+    .daily-card .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--purple-light);
+      box-shadow: 0 0 18px rgba(168,85,247,.85);
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .daily-card small {
+      display: block;
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 11px;
+      font-weight: 1000;
+      margin-bottom: 9px;
+    }
+
+    .daily-card strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .daily-card span {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 15px;
+    }
+
+    .featured-spotlight {
+      padding: 70px 22px 0;
+    }
+
+    .featured-card {
+      max-width: 1200px;
+      margin: auto;
+      border: 1px solid rgba(168,85,247,.42);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(168,85,247,.38), transparent 34%),
+        radial-gradient(circle at 100% 60%, rgba(56,189,248,.18), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+      border-radius: 38px;
+      padding: clamp(28px, 5vw, 50px);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .featured-card::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      right: -80px;
+      top: -100px;
+      background: rgba(236,72,153,.18);
+      filter: blur(12px);
+    }
+
+    .featured-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .featured-label {
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 1000;
+      margin: 0 0 12px;
+    }
+
+    .featured-content h2 {
+      margin-bottom: 16px;
+    }
+
+    .featured-content p {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .featured-actions {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 14px;
+      justify-items: end;
+    }
+
+    .featured-note {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      border-radius: 24px;
+      padding: 20px;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 360px;
+    }
+
+    .site-alert {
+      padding: 0 22px;
+      margin-top: -34px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .site-alert-inner {
+      max-width: 1200px;
+      margin: auto;
+      border: 1px solid rgba(168,85,247,.42);
+      background: rgba(7,0,13,.72);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+    }
+
+    .site-alert-inner b {
+      color: #f3e8ff;
+    }
+
+    .site-alert-inner span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+
     @media (max-width: 900px) {
       .nav-inner {
         display: flex;
@@ -784,6 +956,178 @@
       flex-wrap: wrap;
     }
 
+
+    /* =========================================================
+       DAILY UPDATE / CONTENT.JS SECTIONS
+       These styles support the parts controlled by content.js.
+    ========================================================= */
+
+    .daily-dashboard {
+      padding: 42px 22px 0;
+    }
+
+    .daily-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .daily-card {
+      border: 1px solid rgba(168,85,247,.38);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(168,85,247,.24), transparent 34%),
+        rgba(255,255,255,.065);
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.24);
+    }
+
+    .daily-card .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--purple-light);
+      box-shadow: 0 0 18px rgba(168,85,247,.85);
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .daily-card small {
+      display: block;
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-size: 11px;
+      font-weight: 1000;
+      margin-bottom: 9px;
+    }
+
+    .daily-card strong {
+      display: block;
+      font-size: 22px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .daily-card span {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 15px;
+    }
+
+    .featured-spotlight {
+      padding: 70px 22px 0;
+    }
+
+    .featured-card {
+      max-width: 1200px;
+      margin: auto;
+      border: 1px solid rgba(168,85,247,.42);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(168,85,247,.38), transparent 34%),
+        radial-gradient(circle at 100% 60%, rgba(56,189,248,.18), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.045));
+      border-radius: 38px;
+      padding: clamp(28px, 5vw, 50px);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .featured-card::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      right: -80px;
+      top: -100px;
+      background: rgba(236,72,153,.18);
+      filter: blur(12px);
+    }
+
+    .featured-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .featured-label {
+      color: #d8b4fe;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 1000;
+      margin: 0 0 12px;
+    }
+
+    .featured-content h2 {
+      margin-bottom: 16px;
+    }
+
+    .featured-content p {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 760px;
+    }
+
+    .featured-actions {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 14px;
+      justify-items: end;
+    }
+
+    .featured-note {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      border-radius: 24px;
+      padding: 20px;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 360px;
+    }
+
+    .site-alert {
+      padding: 0 22px;
+      margin-top: -34px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .site-alert-inner {
+      max-width: 1200px;
+      margin: auto;
+      border: 1px solid rgba(168,85,247,.42);
+      background: rgba(7,0,13,.72);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.28);
+    }
+
+    .site-alert-inner b {
+      color: #f3e8ff;
+    }
+
+    .site-alert-inner span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+
     @media (max-width: 900px) {
       .hero-grid,
       .split,
@@ -795,6 +1139,23 @@
       .logo-stage { min-height: 400px; }
       h1 { letter-spacing: -3px; }
       .section-head { display: block; }
+    }
+
+
+    @media (max-width: 900px) {
+      .daily-grid,
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-actions {
+        justify-items: start;
+      }
+
+      .site-alert-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     @media (max-width: 560px) {
@@ -819,6 +1180,402 @@
       .pin { display: none; }
       .status { width: fit-content; }
     }
+
+    /* =========================================================
+       MOCKUP MATCH OVERRIDES — homepage command center
+    ========================================================= */
+
+    .nav {
+      top: 0;
+      background: rgba(9, 2, 24, .92);
+      border-top: 1px solid rgba(168,85,247,.22);
+      border-bottom: 1px solid rgba(168,85,247,.32);
+      box-shadow: 0 0 42px rgba(168,85,247,.16);
+    }
+
+    .nav-inner {
+      max-width: 1440px;
+      grid-template-columns: auto 1fr auto;
+      padding: 14px 44px;
+    }
+
+    .brand-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      font-size: 20px;
+      letter-spacing: -2px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(168,85,247,1), rgba(80,24,140,.95));
+      border: 2px solid rgba(216,180,254,.9);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.16) inset,
+        0 0 28px rgba(168,85,247,.72),
+        0 12px 36px rgba(0,0,0,.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-badge::after {
+      content: "";
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 7px;
+      pointer-events: none;
+    }
+
+    .brand-text {
+      color: white;
+      font-size: 21px;
+      letter-spacing: -.9px;
+      text-transform: uppercase;
+      display: inline-flex;
+      gap: 5px;
+      align-items: baseline;
+      text-shadow: 0 0 18px rgba(168,85,247,.3);
+    }
+
+    .brand-text em {
+      color: var(--purple-light);
+      font-style: normal;
+      text-shadow: 0 0 18px rgba(168,85,247,.72);
+    }
+
+    .nav-links {
+      gap: 20px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      font-size: 13px;
+    }
+
+    .nav-links a:not(:last-child)::before {
+      content: "";
+    }
+
+    .nav-links a::after {
+      display: none;
+    }
+
+    .nav-links a + a::before {
+      content: "•";
+      color: var(--purple-light);
+      margin-right: 20px;
+      text-shadow: 0 0 12px rgba(168,85,247,.9);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav-action {
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      font-weight: 1000;
+      font-size: 13px;
+      border: 1px solid rgba(168,85,247,.62);
+      background: rgba(168,85,247,.12);
+      border-radius: 12px;
+      padding: 13px 20px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 0 18px rgba(168,85,247,.18);
+    }
+
+    .featured-spotlight {
+      padding: 26px 22px 22px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(168,85,247,.18), transparent 28%),
+        rgba(2,0,6,.35);
+    }
+
+    .featured-card {
+      max-width: 1440px;
+      grid-template-columns: 190px 1fr 420px;
+      min-height: 230px;
+      padding: 32px 74px 32px 54px;
+      border-radius: 24px;
+      border-color: rgba(168,85,247,.82);
+      box-shadow:
+        0 0 0 1px rgba(216,180,254,.12) inset,
+        0 0 34px rgba(168,85,247,.44),
+        0 36px 110px rgba(0,0,0,.36);
+    }
+
+    .spotlight-art {
+      position: relative;
+      height: 160px;
+      display: grid;
+      place-items: center;
+    }
+
+    .slab-icon {
+      width: 78px;
+      height: 118px;
+      border: 2px solid rgba(168,85,247,.9);
+      border-radius: 12px;
+      display: grid;
+      place-items: start center;
+      padding-top: 12px;
+      color: #ead7ff;
+      font-size: 13px;
+      font-weight: 1000;
+      transform: rotate(-14deg);
+      box-shadow:
+        0 0 24px rgba(168,85,247,.7),
+        inset 0 0 24px rgba(168,85,247,.18);
+    }
+
+    .slab-icon::after {
+      content: "";
+      width: 42px;
+      height: 42px;
+      border: 2px solid rgba(168,85,247,.55);
+      border-radius: 50%;
+      position: absolute;
+      top: 62px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .sparkle {
+      position: absolute;
+      right: 18px;
+      top: 36px;
+      color: #d8b4fe;
+      font-size: 30px;
+      text-shadow: 0 0 20px rgba(168,85,247,.9);
+    }
+
+    .featured-content h2 {
+      font-size: clamp(46px, 4.6vw, 72px);
+      letter-spacing: -3px;
+    }
+
+    .featured-actions {
+      justify-items: stretch;
+    }
+
+    .featured-note {
+      max-width: none;
+      padding: 26px 28px;
+      background: rgba(255,255,255,.055);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    #featuredButton {
+      width: 100%;
+      justify-content: center;
+      border-radius: 16px;
+    }
+
+    .command-hero {
+      min-height: 620px;
+      padding: 72px 44px 82px;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .command-grid {
+      max-width: 1440px;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 70px;
+    }
+
+    .command-copy h1 {
+      font-size: clamp(58px, 5.2vw, 88px);
+      letter-spacing: -4px;
+      line-height: .96;
+    }
+
+    .command-copy .hero-copy {
+      max-width: 500px;
+      font-size: 21px;
+    }
+
+    .command-copy .cta-row .btn {
+      min-width: 210px;
+      border-radius: 14px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      box-shadow: 0 0 24px rgba(168,85,247,.25);
+    }
+
+    .next-stream-line {
+      margin-top: 26px;
+      color: #f5efff;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .next-stream-line span,
+    .next-stream-line b {
+      color: var(--purple-light);
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    .next-stream-line em {
+      font-style: normal;
+      color: white;
+    }
+
+    .logo-stage {
+      min-height: 540px;
+      width: 100%;
+      place-items: center;
+      perspective: 1000px;
+      overflow: visible;
+      isolation: isolate;
+    }
+
+    .main-logo {
+      width: min(560px, 50vw);
+      border-radius: 34px;
+      z-index: 3;
+      transform: rotate(3deg);
+      animation: float 5s ease-in-out infinite;
+      border: 2px solid rgba(168,85,247,.6);
+      box-shadow:
+        0 0 32px rgba(168,85,247,.9),
+        0 0 100px rgba(168,85,247,.32),
+        0 40px 100px rgba(0,0,0,.7);
+    }
+
+    .floating-card {
+      width: 225px;
+      min-height: 340px;
+      border-radius: 28px;
+      border: 2px solid rgba(168,85,247,.72);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(168,85,247,.22), transparent 45%),
+        linear-gradient(160deg, rgba(255,255,255,.13), rgba(255,255,255,.035));
+      box-shadow: 0 0 28px rgba(168,85,247,.42), 0 30px 80px rgba(0,0,0,.5);
+      z-index: 2;
+      padding: 30px 22px;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .floating-card strong {
+      font-size: 26px;
+      line-height: 1;
+      transform: rotate(-7deg);
+    }
+
+    .floating-card span {
+      color: var(--purple-light);
+      font-size: 28px;
+      font-weight: 1000;
+      transform: rotate(-7deg);
+    }
+
+    .floating-card small {
+      color: rgba(255,255,255,.84);
+      line-height: 1.45;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .card-a {
+      left: -2%;
+      top: 72px;
+      transform: translateX(-28px) rotate(-10deg);
+      z-index: 2;
+    }
+
+    .card-b {
+      right: -8%;
+      bottom: 34px;
+      width: 190px;
+      min-height: 250px;
+      transform: translateX(28px) rotate(13deg);
+      z-index: 1;
+      font-size: 21px;
+    }
+
+    .logo-glow {
+      width: 72%;
+      opacity: .85;
+    }
+
+    .page[data-page="/"] > .section:first-of-type {
+      padding-top: 30px;
+    }
+
+
+    /* Status bar restored under hero */
+    .site-alert {
+      padding: 0 22px;
+      margin-top: -34px;
+      position: relative;
+      z-index: 6;
+    }
+
+    .site-alert-inner {
+      max-width: 1200px;
+      margin: auto;
+      border: 1px solid rgba(168,85,247,.56);
+      background: rgba(7,0,13,.78);
+      backdrop-filter: blur(18px);
+      border-radius: 24px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.32);
+    }
+
+    .daily-dashboard {
+      padding: 42px 22px 0;
+    }
+
+    .daily-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .daily-card {
+      min-height: 126px;
+      border: 1px solid rgba(168,85,247,.44);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(168,85,247,.28), transparent 34%),
+        rgba(255,255,255,.058);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.24);
+    }
+
+    @media (max-width: 1100px) {
+      .nav-actions { display: none; }
+      .featured-card { grid-template-columns: 1fr; padding: 34px; }
+      .spotlight-art { display: none; }
+      .command-grid { grid-template-columns: 1fr; }
+      .logo-stage { min-height: 460px; }
+      .main-logo { width: min(520px, 86vw); }
+      .card-a { left: 0; transform: rotate(-10deg); }
+      .card-b { right: 0; transform: rotate(13deg); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-inner { padding: 12px 16px; }
+      .nav-links a + a::before { display: none; }
+      .command-hero { padding: 54px 22px 70px; }
+      .command-copy h1 { font-size: clamp(48px, 13vw, 68px); }
+      .floating-card { display: none; }
+      .featured-card { border-radius: 22px; }
+    }
+
   </style>
 </head>
 
@@ -828,15 +1585,22 @@
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand route-link" href="/" data-route="/" aria-label="Flavor & Foils home">
-        <div class="brand-badge">F&F</div>
+        <div class="brand-badge">FF</div>
+        <span class="brand-text"><strong>Flavor</strong> <em>& Foils</em></span>
       </a>
 
       <div class="nav-links">
-        <a class="route-link" href="/shop" data-route="/shop">Shop</a>
-        <a class="route-link" href="/live" data-route="/live">Live</a>
+        <a class="route-link" href="/" data-route="/">Honest TCG</a>
+        <a class="route-link" href="/live" data-route="/live">Live Rips</a>
+        <a class="route-link" href="/shop" data-route="/shop">Auctions</a>
         <a class="route-link" href="/vault" data-route="/vault">Vault</a>
-        <a class="route-link" href="/community" data-route="/community">Community</a>
-        <a class="route-link" href="/about" data-route="/about">About</a>
+        <a class="route-link" href="/community" data-route="/community">Community Driven</a>
+        <a class="route-link" href="/about" data-route="/about">About Me</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-action" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Discord</a>
+        <a class="nav-action" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Shop</a>
       </div>
 
       <button class="menu-btn" type="button" onclick="document.body.classList.toggle('nav-open')">Menu</button>
@@ -845,78 +1609,123 @@
 
   <main>
     <section class="page active" data-page="/">
-      <header class="hero">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow pill">⚡ TCG • real pulls • real reactions</div>
+      <section class="featured-spotlight" aria-label="Featured Spotlight">
+        <div class="featured-card">
+          <div class="spotlight-art" aria-hidden="true">
+            <div class="slab-icon">PSA</div>
+            <div class="sparkle">✦</div>
+          </div>
 
+          <div class="featured-content">
+            <p class="featured-label" id="featuredLabel">FEATURED SPOTLIGHT</p>
+            <h2 id="featuredTitle">PSA Submission Update</h2>
+            <p id="featuredText">Some serious vintage heat is still out at grading — big updates coming when the returns land.</p>
+          </div>
+
+          <div class="featured-actions">
+            <div class="featured-note" id="featuredNote">
+              This spotlight is the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.
+            </div>
+            <a id="featuredButton" class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join the Discord for updates</a>
+          </div>
+        </div>
+      </section>
+
+      <header class="hero command-hero">
+        <div class="hero-grid command-grid">
+          <div class="command-copy">
+            <p class="kicker">Link Hub</p>
             <h1>
-              <span class="ff">Flavor & Foils</span><br />
-              Where the <span class="flavor-word">flavor</span><br />
-              hits different.
+              Everything<br />
+              <span class="flavor-word">Flavor & Foils</span>.
             </h1>
 
             <p class="hero-copy">
-              A collector-first TCG brand built around honest cards, late-night lives, real reactions, community, and no gatekeeping drops.
+              Streams, drops, community updates, collection showcases, videos, and places to follow the brand.
             </p>
 
             <div class="cta-row">
-              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Shop / Watch on TikTok</a>
-              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
-              <a class="btn btn-dark route-link" href="/vault" data-route="/vault">Enter The Vault</a>
+              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join the Discord</a>
+              <a class="btn btn-dark" id="latestVideoButton" href="#" target="_blank" rel="noopener">Latest Video</a>
+            </div>
+
+            <div class="next-stream-line">
+              <span>▣</span>
+              <b>Next Stream:</b>
+              <em id="nextStream">Thursday at 8PM EST</em>
             </div>
           </div>
 
           <div class="logo-stage">
             <div class="logo-glow"></div>
-            <div class="floating-card card-a">LIVE<br />PULLS</div>
+            <div class="floating-card card-a">
+              <strong>GATEKEEPING?</strong>
+              <span>NOT HERE.</span>
+              <small>We keep it real, open, and built for collectors who actually love the hobby.</small>
+            </div>
             <img class="main-logo" src="logo.png" alt="Flavor & Foils logo" />
             <div class="floating-card card-b">NO<br />GATEKEEPING</div>
           </div>
         </div>
       </header>
 
-      <div class="ticker">
-        <div class="ticker-track">
-          <span>HONEST TCG</span><span>LIVE RIPS</span><span>AUCTIONS</span><span>GAMING</span><span>COMMUNITY DRIVEN</span><span>REAL REACTIONS</span>
-          <span>HONEST TCG</span><span>LIVE RIPS</span><span>AUCTIONS</span><span>GAMING</span><span>COMMUNITY DRIVEN</span><span>REAL REACTIONS</span>
+      <section class="site-alert" aria-label="Current Flavor & Foils update">
+        <div class="site-alert-inner">
+          <div>
+            <b id="mainBannerTitle">Current Update</b><br />
+            <span id="mainBannerText">Shop sold out — restock coming soon.</span>
+          </div>
+          <a id="mainBannerButton" class="pill" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Get Updates</a>
         </div>
-      </div>
+      </section>
+
+      <section class="daily-dashboard" aria-label="Daily status dashboard">
+        <div class="daily-grid">
+          <div class="daily-card">
+            <small>Live Status</small>
+            <strong><span class="status-dot"></span><span id="liveStatus">OFFLINE</span></strong>
+            <span id="liveStatusNote">Discord gets same-day updates first.</span>
+          </div>
+
+          <div class="daily-card">
+            <small>Next Stream</small>
+            <strong id="nextStreamCard">Thursday at 8PM EST</strong>
+            <span id="nextStreamNote">Times can move around when life gets spicy.</span>
+          </div>
+
+          <div class="daily-card">
+            <small>Shop Status</small>
+            <strong id="shopStatus">RESTOCKING</strong>
+            <span id="shopStatusNote">Inventory updates will post here and in Discord.</span>
+          </div>
+        </div>
+      </section>
+
 
       <section class="section">
         <div class="wrap">
-          <div class="section-head">
-            <div>
-              <p class="kicker">Link Hub</p>
-              <h2>Everything <span class="ff">Flavor & Foils</span>.</h2>
-              <p class="section-note">
-                Streams, drops, community updates, collection showcases, videos, and places to follow the brand.
-              </p>
-            </div>
-          </div>
-
           <div class="link-hub">
-            <a class="hub-card" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">
               <div><strong>TikTok</strong><span>Shop, live streams, clips, drops, and the main hub.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">
               <div><strong>Discord</strong><span>Community updates, stream alerts, drops, and collector talk.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" data-link="instagram" target="_blank" rel="noopener">
               <div><strong>Instagram</strong><span>Photos, setup shots, pulls, cards, and brand visuals.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF" data-link="youtube" target="_blank" rel="noopener">
               <div><strong>YouTube</strong><span>Clips, shorts, pulls, reactions, and longer videos.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">
+            <a class="hub-card" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">
               <div><strong>Collectr Showcase</strong><span>Personal collection, grails, slabs, and collector credibility.</span></div><div class="arrow">→</div>
             </a>
 
-            <a class="hub-card" href="mailto:flavorandfoils@gmail.com">
+            <a class="hub-card" href="mailto:flavorandfoils@gmail.com" data-link="email">
               <div><strong>Contact</strong><span>Questions, collabs, vendor events, support, and business.</span></div><div class="arrow">→</div>
             </a>
           </div>
@@ -963,8 +1772,8 @@
             </p>
 
             <div class="cta-row" style="justify-content:center;">
-              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Watch TikTok</a>
-              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
+              <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Watch TikTok</a>
+              <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join Discord</a>
               <a class="btn btn-dark route-link" href="/community" data-route="/community">Community Board</a>
             </div>
           </div>
@@ -982,8 +1791,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Shop on TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Drop Alerts</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Shop on TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Drop Alerts</a>
           </div>
         </div>
       </header>
@@ -1009,8 +1818,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Watch on TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Get Live Alerts</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Watch on TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Get Live Alerts</a>
           </div>
         </div>
       </header>
@@ -1026,7 +1835,7 @@
           </div>
 
           <div class="panel">
-            <div class="schedule-list">
+            <div class="schedule-list" id="scheduleList">
               <div class="day"><b>Monday</b><span>Late night stream • Around 11 PM</span></div>
               <div class="day"><b>Tuesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
               <div class="day"><b>Wednesday</b><span>Afternoon stream • Around 3–6 PM</span></div>
@@ -1050,8 +1859,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">View Collectr Showcase</a>
-            <a class="btn btn-purple" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">See Vault Clips</a>
+            <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">View Collectr Showcase</a>
+            <a class="btn btn-purple" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">See Vault Clips</a>
           </div>
         </div>
       </header>
@@ -1088,7 +1897,7 @@
             </div>
 
             <div class="cta-row">
-              <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" target="_blank" rel="noopener">Open Collectr Portfolio</a>
+              <a class="btn btn-main" href="https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397" data-link="collectr" target="_blank" rel="noopener">Open Collectr Portfolio</a>
             </div>
           </div>
         </div>
@@ -1105,8 +1914,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join Discord</a>
-            <a class="btn btn-purple" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" target="_blank" rel="noopener">Follow Instagram</a>
+            <a class="btn btn-main" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join Discord</a>
+            <a class="btn btn-purple" href="https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr" data-link="instagram" target="_blank" rel="noopener">Follow Instagram</a>
           </div>
         </div>
       </header>
@@ -1193,8 +2002,8 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" target="_blank" rel="noopener">Follow TikTok</a>
-            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" target="_blank" rel="noopener">Join The Community</a>
+            <a class="btn btn-main" href="https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2" data-link="tiktok" target="_blank" rel="noopener">Follow TikTok</a>
+            <a class="btn btn-purple" href="https://discord.gg/5yxDPmGRMg" data-link="discord" target="_blank" rel="noopener">Join The Community</a>
           </div>
         </div>
       </header>
@@ -1254,7 +2063,110 @@
     </div>
   </footer>
 
+  <script src="content.js"></script>
+
   <script>
+    const defaultSiteContent = {
+      links: {
+        tiktok: "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
+        discord: "https://discord.gg/5yxDPmGRMg",
+        instagram: "https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr",
+        youtube: "https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF",
+        collectr: "https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397",
+        email: "mailto:flavorandfoils@gmail.com"
+      },
+      daily: {
+        mainBannerTitle: "Current Update",
+        mainBannerText: "Shop sold out — restock coming soon.",
+        mainBannerButtonText: "Get Updates",
+        liveStatus: "OFFLINE",
+        liveStatusNote: "Discord gets same-day updates first.",
+        nextStream: "Thursday at 8PM EST",
+        nextStreamNote: "Times can move around when life gets spicy.",
+        shopStatus: "RESTOCKING",
+        shopStatusNote: "Inventory updates will post here and in Discord."
+      },
+      featured: {
+        label: "FEATURED SPOTLIGHT",
+        title: "PSA Submission Update",
+        text: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
+        note: "This spotlight is the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.",
+        buttonText: "Join the Discord for updates",
+        buttonLink: "discord"
+      },
+      schedule: [
+        { day: "Monday", detail: "Late night stream • Around 11 PM" },
+        { day: "Tuesday", detail: "Afternoon stream • Around 3–6 PM" },
+        { day: "Wednesday", detail: "Afternoon stream • Around 3–6 PM" },
+        { day: "Thursday", detail: "Main auction night • Around 11 PM" },
+        { day: "Friday", detail: "Late night stream • Around 11 PM" },
+        { day: "Saturday", detail: "Off day • Gotta live life a little 😂" },
+        { day: "Sunday", detail: "Afternoon stream • Around 3–6 PM" }
+      ]
+    };
+
+    const siteContent = window.siteContent || defaultSiteContent;
+
+    function setText(id, value) {
+      const element = document.getElementById(id);
+      if (element && value !== undefined && value !== null) element.textContent = value;
+    }
+
+    function resolveLink(linkValue) {
+      if (!linkValue) return "#";
+      if (siteContent.links && siteContent.links[linkValue]) return siteContent.links[linkValue];
+      return linkValue;
+    }
+
+    function applySiteContent() {
+      const links = siteContent.links || {};
+      document.querySelectorAll("[data-link]").forEach(link => {
+        const key = link.dataset.link;
+        if (links[key]) link.href = links[key];
+      });
+
+      const latestVideoButton = document.getElementById("latestVideoButton");
+      if (latestVideoButton && links.latestVideo) latestVideoButton.href = links.latestVideo;
+
+      const daily = siteContent.daily || {};
+      setText("mainBannerTitle", daily.mainBannerTitle);
+      setText("mainBannerText", daily.mainBannerText);
+      setText("liveStatus", daily.liveStatus);
+      setText("liveStatusNote", daily.liveStatusNote);
+      setText("nextStream", daily.nextStream);
+      setText("nextStreamCard", daily.nextStream);
+      setText("nextStreamNote", daily.nextStreamNote);
+      setText("shopStatus", daily.shopStatus);
+      setText("shopStatusNote", daily.shopStatusNote);
+
+      const mainBannerButton = document.getElementById("mainBannerButton");
+      if (mainBannerButton) {
+        if (daily.mainBannerButtonText) mainBannerButton.textContent = daily.mainBannerButtonText;
+        mainBannerButton.href = resolveLink(daily.mainBannerButtonLink || "discord");
+      }
+
+      const featured = siteContent.featured || {};
+      setText("featuredLabel", featured.label);
+      setText("featuredTitle", featured.title);
+      setText("featuredText", featured.text);
+      setText("featuredNote", featured.note);
+
+      const featuredButton = document.getElementById("featuredButton");
+      if (featuredButton) {
+        if (featured.buttonText) featuredButton.textContent = featured.buttonText;
+        featuredButton.href = resolveLink(featured.buttonLink || "discord");
+      }
+
+      const scheduleList = document.getElementById("scheduleList");
+      if (scheduleList && Array.isArray(siteContent.schedule)) {
+        scheduleList.innerHTML = siteContent.schedule.map(item => `
+          <div class="day"><b>${item.day}</b><span>${item.detail}</span></div>
+        `).join("");
+      }
+    }
+
+    applySiteContent();
+
     const pages = document.querySelectorAll(".page");
     const routeLinks = document.querySelectorAll(".route-link");
 
