@@ -74,13 +74,14 @@ const siteContent = {
      - stream theme
      - sold out/restock update
      - card show/event prep
-===================================================== */
+  ===================================================== */
 
   featuredLabel: "FEATURED SPOTLIGHT",
 
   featuredTitle: "PSA Submission Update",
 
-  featuredText: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
+  featuredText:
+    "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
 
   featuredButtonText: "Join the Discord for updates",
 
@@ -104,7 +105,8 @@ const siteContent = {
      Paste your shop/store link below.
   ===================================================== */
 
-  shopLink: "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
+  shopLink:
+    "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
 
 
 
@@ -132,6 +134,64 @@ const siteContent = {
     "Friday — Late night around 11 PM",
     "Saturday — Off day",
     "Sunday — Afternoon around 3–6 PM"
+  ],
+
+
+
+  /* =====================================================
+     EVENTS BOARD
+
+     This powers the Community page Events Board.
+
+     Add/remove events anytime.
+
+     STATUS IDEAS:
+     - Watching
+     - Upcoming
+     - Interested
+     - Confirmed
+     - Maybe
+     - Planned
+  ===================================================== */
+
+  eventsBoard: [
+
+    {
+      title: "Collect-A-Con Watchlist",
+
+      text:
+        "Big show energy, trade possibilities, content, pickups, and future setup potential.",
+
+      status: "Watching"
+    },
+
+    {
+      title: "Local Card Shows",
+
+      text:
+        "Potential vendor tables, trade nights, meetups, and live content days.",
+
+      status: "Interested"
+    },
+
+    {
+      title: "Stream Specials",
+
+      text:
+        "Theme nights, auctions, community goals, giveaways, and live-only drops.",
+
+      status: "Upcoming"
+    },
+
+    {
+      title: "Community Meetups",
+
+      text:
+        "Future plans for collectors who want to trade, rip packs, talk cards, and hang.",
+
+      status: "Maybe"
+    }
+
   ]
 
 };
