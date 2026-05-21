@@ -35,7 +35,7 @@ window.siteContent = {
     label: "FEATURED SPOTLIGHT",
     title: "PSA Submission Update",
     text: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
-    note: "Use this for the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.",
+    note: "We got 12 cards coming back to PC",
     buttonText: "Join the Discord for updates",
     buttonLink: "discord"
   },
