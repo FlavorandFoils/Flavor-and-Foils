@@ -8,15 +8,15 @@ const siteContent = {
   liveStatus: "OFFLINE",
   liveStatusNote: "Discord gets same-day updates first.",
 
-  mainBanner: "Shop sold out — restock coming soon.",
+  mainBanner: "Shop RESTOCKED - Mix1.",
   mainBannerTitle: "Current Update",
   mainBannerButtonText: "Get Updates",
   mainBannerButtonLink: "https://discord.gg/5yxDPmGRMg",
 
-  nextStream: "Thursday at 8PM EST",
-  nextStreamNote: "Times can move around when life gets spicy.",
+  nextStream: "Thursday at 11PM EST",
+  nextStreamNote: "Lets catch em' all!",
 
-  shopStatus: "RESTOCKING",
+  shopStatus: "STOCKED",
   shopStatusNote: "Inventory updates will post here and in Discord.",
 
   featuredLabel: "FEATURED SPOTLIGHT",
