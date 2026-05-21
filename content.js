@@ -4,7 +4,7 @@
    Do NOT touch anything outside this file unless needed.
 ========================================================= */
 
-const siteContent = {
+window.siteContent = {
   liveStatus: "OFFLINE",
   liveStatusNote: "Discord gets same-day updates first.",
 
