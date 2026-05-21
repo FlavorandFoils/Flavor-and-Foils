@@ -5,34 +5,40 @@
 ========================================================= */
 
 window.siteContent = {
-  liveStatus: "OFFLINE",
-  liveStatusNote: "Discord gets same-day updates first.",
+  links: {
+    tiktok: "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
+    discord: "https://discord.gg/5yxDPmGRMg",
+    instagram: "https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr",
+    youtube: "https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF",
+    collectr: "https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397",
+    email: "mailto:flavorandfoils@gmail.com",
+    latestVideo: "#"
+  },
 
-  mainBanner: "Shop RESTOCKED - Mix1.",
-  mainBannerTitle: "Current Update",
-  mainBannerButtonText: "Get Updates",
-  mainBannerButtonLink: "https://discord.gg/5yxDPmGRMg",
+  daily: {
+    mainBannerTitle: "Current Update",
+    mainBannerText: "Shop RESTOCKED - Mix1.",
+    mainBannerButtonText: "Get Updates",
+    mainBannerButtonLink: "discord",
 
-  nextStream: "Thursday at 11PM EST",
-  nextStreamNote: "Lets catch em' all!",
+    liveStatus: "OFFLINE",
+    liveStatusNote: "Discord gets same-day updates first.",
 
-  shopStatus: "STOCKED",
-  shopStatusNote: "Inventory updates will post here and in Discord.",
+    nextStream: "Thursday at 11PM EST",
+    nextStreamNote: "Lets catch em' all!",
 
-  featuredLabel: "FEATURED SPOTLIGHT",
-  featuredTitle: "PSA Submission Update",
-  featuredText: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
-  featuredNote: "Use this for the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.",
-  featuredButtonText: "Join the Discord for updates",
-  featuredButtonLink: "https://discord.gg/5yxDPmGRMg",
+    shopStatus: "STOCKED",
+    shopStatusNote: "Inventory updates will post here and in Discord."
+  },
 
-  latestVideoLink: "PASTE_LATEST_VIDEO_LINK_HERE",
-  shopLink: "https://www.tiktok.com/@flavorandfoils?_r=1&_t=zp-92k6zzoymy2",
-  discordLink: "https://discord.gg/5yxDPmGRMg",
-  instagramLink: "https://www.instagram.com/flavorandfoils?igsh=MTk1dmR0OGZrYWNrZA%3D%3D&utm_source=qr",
-  youtubeLink: "https://youtube.com/@flavorandfoils?si=xVTFNEWMXQbtkLmF",
-  collectrLink: "https://app.getcollectr.com/showcase/profile/2f9316d9-549c-46d5-a328-e6a9a894a397",
-  emailLink: "mailto:flavorandfoils@gmail.com",
+  featured: {
+    label: "FEATURED SPOTLIGHT",
+    title: "PSA Submission Update",
+    text: "Some serious vintage heat is still out at grading — big updates coming when the returns land.",
+    note: "Use this for the current cool thing: pull, pickup, grading update, stream theme, event, or collection piece.",
+    buttonText: "Join the Discord for updates",
+    buttonLink: "discord"
+  },
 
   schedule: [
     "Monday — Late night around 11 PM",
