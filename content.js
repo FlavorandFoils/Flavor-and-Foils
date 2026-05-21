@@ -17,7 +17,7 @@ window.siteContent = {
 
   daily: {
     mainBannerTitle: "Current Update",
-    mainBannerText: "Shop RESTOCKED - Mix1.",
+    mainBannerText: "Shop RESTOCKED - Mix1 - Check Collectr",
     mainBannerButtonText: "Get Updates",
     mainBannerButtonLink: "discord",
 
