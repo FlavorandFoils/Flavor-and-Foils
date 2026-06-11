@@ -17,7 +17,7 @@ window.siteContent = {
 
   daily: {
     mainBannerTitle: "Current Update",
-    mainBannerText: "Shop RESTOCKED - Mix1 - Check Collectr",
+    mainBannerText: "Low Stock -  Quality Vintage Bangers!",
     mainBannerButtonText: "Get Updates",
     mainBannerButtonLink: "discord",
 
@@ -27,7 +27,7 @@ window.siteContent = {
     nextStream: "Thursday at 11PM EST",
     nextStreamNote: "Lets catch em' all!",
 
-    shopStatus: "STOCKED",
+    shopStatus: "LOW STOCK",
     shopStatusNote: "Inventory updates will post here and in Discord."
   },
 
