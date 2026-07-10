@@ -17,7 +17,7 @@ window.siteContent = {
 
   daily: {
     mainBannerTitle: "Current Update",
-    mainBannerText: "Low Stock -  Quality Vintage Bangers!",
+    mainBannerText: "Shop STOCKED on TikTok!",
     mainBannerButtonText: "Get Updates",
     mainBannerButtonLink: "discord",
 
@@ -27,7 +27,7 @@ window.siteContent = {
     nextStream: "Thursday at 11PM EST",
     nextStreamNote: "Lets catch em' all!",
 
-    shopStatus: "LOW STOCK",
+    shopStatus: "STOCKED",
     shopStatusNote: "Inventory updates will post here and in Discord."
   },
 
